@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Website in Ahmedabad</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Custom single-page websites for Ahmedabad businesses. Designed for you, built faster with AI tools. ₹4,999, live in 48 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0D0D0B;--ink2:#1A1A17;--paper:#F3EFE6;--paper2:#E9E4D8;--stone:#8C887E;--muted:#6B675E;--line:#2B2A26;--live:#CDEB4B;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){color-scheme:dark}}
+:root[data-theme="dark"]{color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:'Inter Tight',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 14px var(--live);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #CDEB4B88}50%{box-shadow:0 0 0 7px #CDEB4B00}}
+
+/* ---------- reveal animations ---------- */
+.js [data-r].pending{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js [data-r].pending.in{opacity:1;transform:none}
+.js h1 .wd{display:inline-block;opacity:0;transform:translateY(.5em);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*.07s + .15s)}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}.js [data-r],.js h1 .wd{opacity:1;transform:none}}
+
+/* ---------- nav ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--ink)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:#0D0D0Bcc;border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px}
+.mark{width:36px;height:36px;border-radius:50%;background:var(--ink2);border:1px solid var(--line);display:grid;place-items:center;position:relative;font-family:'Instrument Serif',serif;font-size:23px}
+.mark::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--live);right:6px;bottom:8px}
+.links{display:none;gap:26px;font-size:14px;color:var(--stone)}
+.links a{transition:color .2s}.links a:hover{color:var(--paper)}
+@media(min-width:960px){.links{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--paper);color:var(--ink);padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .25s,background .25s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);background:var(--live)}
+.btn.line{background:transparent;color:var(--paper);border:1px solid var(--line)}
+.btn.line:hover{border-color:var(--paper);background:transparent}
+.btn.sm{padding:10px 18px;font-size:14px}
+.btn svg{width:17px;height:17px}
+
+/* ---------- hero ---------- */
+.hero{padding:56px 0 80px;display:grid;gap:60px;align-items:center}
+@media(min-width:1000px){.hero{grid-template-columns:1fr 1.05fr;padding:80px 0 110px}}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(50px,8vw,96px);line-height:.96;letter-spacing:-.02em;margin:26px 0}
+h1 i,h2 i{color:var(--live)}
+.lead{font-size:19px;color:var(--stone);max-width:44ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.note{margin-top:22px;font-size:14px;color:var(--stone)}
+
+/* stage: laptop + phone playing site recordings */
+.stage{position:relative;padding:0 0 60px 0}
+.laptop{position:relative;margin-left:auto;width:100%;max-width:620px}
+.lap-screen{border:1px solid var(--line);border-radius:18px 18px 6px 6px;background:var(--ink2);overflow:hidden;box-shadow:0 60px 120px -40px #000}
+.bar{height:36px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 14px}
+.bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.url{margin-left:10px;flex:1;height:22px;border-radius:11px;background:var(--ink);font-size:12px;color:var(--stone);display:flex;align-items:center;gap:8px;padding:0 12px}
+.url .lock{width:7px;height:7px;border-radius:50%;background:var(--live)}
+.view{position:relative;aspect-ratio:16/10;overflow:hidden;background:#111}
+.view img{position:absolute;left:0;top:0;width:100%;opacity:0;transition:opacity .8s}
+.view img.on{opacity:1}
+.lap-base{height:14px;margin:0 -4%;border-radius:0 0 16px 16px;background:linear-gradient(#2a2a26,#151513);box-shadow:0 18px 30px -12px #000}
+.phone{position:absolute;left:0;bottom:0;width:31%;max-width:200px;border-radius:30px;background:#050505;padding:7px;border:1px solid #333;box-shadow:0 40px 80px -20px #000,0 0 0 1px #0008}
+.phone .view{aspect-ratio:9/19.5;border-radius:24px}
+.phone .notch{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:34%;height:14px;border-radius:10px;background:#050505;z-index:2}
+.rec{position:absolute;right:0;top:-16px;display:inline-flex;align-items:center;gap:8px;background:var(--ink2);border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:12px;color:var(--stone);z-index:3}
+.rec b{color:var(--paper);font-weight:500}
+@media(max-width:600px){.phone{width:36%}.stage{padding-bottom:40px}}
+
+/* ---------- backed-by band ---------- */
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0}
+.band .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.backed{display:flex;align-items:center;gap:18px}
+.avs{display:flex}
+.avs img{width:46px;height:46px;border-radius:50%;border:2px solid var(--ink);object-fit:cover}
+.avs img+img{margin-left:-12px}
+.backed p{font-size:15px;color:var(--stone)}
+.backed p b{color:var(--paper);font-weight:500}
+.stats{display:flex;gap:34px;flex-wrap:wrap}
+.stats div{font-size:13px;color:var(--stone)}
+.stats b{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:32px;color:var(--paper);line-height:1}
+
+/* ---------- sections ---------- */
+section{padding:110px 0}
+.kick{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1;letter-spacing:-.015em;max-width:17ch}
+.sub{color:var(--stone);font-size:18px;max-width:54ch;margin-top:22px}
+.cards{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:56px}
+@media(min-width:700px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards.four{grid-template-columns:repeat(4,1fr)}.cards.three{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--ink);padding:34px 30px 38px;transition:background .3s}
+.card:hover{background:var(--ink2)}
+.card .n{font-family:'Instrument Serif',serif;font-size:48px;color:var(--stone);line-height:1}
+.card h3{font-size:20px;font-weight:600;margin:26px 0 10px}
+.card p{color:var(--stone);font-size:15px}
+.card.hl .n{color:var(--live)}
+
+.light{background:var(--paper);color:var(--ink)}
+.light .kick,.light .sub{color:var(--muted)}
+.light h2 i{color:var(--ink);font-style:italic}
+.feat{display:grid;grid-template-columns:1fr;gap:12px;margin-top:56px}
+@media(min-width:640px){.feat{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.feat{grid-template-columns:repeat(3,1fr)}}
+.f{background:#fff;border:1px solid #0000000f;border-radius:18px;padding:22px 22px 24px;transition:transform .3s,box-shadow .3s}
+.f:hover{transform:translateY(-3px);box-shadow:0 18px 30px -18px #0004}
+.f b{display:block;font-size:16px;margin-bottom:4px}
+.f span{font-size:14px;color:var(--muted)}
+.f.core{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.f.core span{color:var(--stone)}
+.f.core b::after{content:"Always included";margin-left:10px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--live);color:var(--ink);padding:3px 8px;border-radius:99px;vertical-align:2px}
+.marquee{margin-top:48px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.track{display:flex;gap:10px;width:max-content;animation:slide 40s linear infinite}
+.track span{border:1px solid #0000001f;padding:10px 18px;border-radius:99px;font-size:15px;white-space:nowrap}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+.work{display:grid;gap:22px;margin-top:56px}
+@media(min-width:900px){.work{grid-template-columns:repeat(3,1fr)}}
+.w{display:block;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--ink2);transition:transform .3s,border-color .3s}
+.w:hover{transform:translateY(-6px);border-color:var(--stone)}
+.w .shot{aspect-ratio:16/10;overflow:hidden}
+.w .shot img{width:100%;transition:transform 4s ease-in-out}
+.w:hover .shot img{transform:translateY(-55%)}
+.w .meta{padding:18px 20px 20px;border-top:1px solid var(--line)}
+.w .meta b{display:block;font-size:17px;font-weight:600}
+.w .meta span{font-size:14px;color:var(--stone)}
+.w .meta em{font-style:normal;font-size:13px;color:var(--live);display:inline-block;margin-top:10px}
+
+/* ---------- who we are ---------- */
+.about-top{display:grid;gap:40px}
+@media(min-width:960px){.about-top{grid-template-columns:1.1fr .9fr;align-items:end}}
+.about-top .big{font-size:22px;line-height:1.5}
+.about-top .big b{font-weight:600}
+.trust{display:grid;gap:14px}
+.trust div{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid #0000000f;border-radius:16px;padding:16px 18px;font-size:15px}
+.trust div::before{content:"✓";flex:0 0 26px;height:26px;border-radius:50%;background:var(--ink);color:var(--live);display:grid;place-items:center;font-size:13px;font-weight:700}
+.trust b{display:block}
+.trust span{color:var(--muted);font-size:14px}
+.igs{display:grid;gap:20px;margin-top:56px}
+@media(min-width:900px){.igs{grid-template-columns:1fr 1fr}}
+.ig{background:#fff;border:1px solid #0000000f;border-radius:26px;padding:28px;transition:transform .3s,box-shadow .3s}
+.ig:hover{transform:translateY(-4px);box-shadow:0 30px 50px -30px #0005}
+.ig-head{display:flex;gap:20px;align-items:center}
+.ring{flex:0 0 auto;padding:3px;border-radius:50%;background:conic-gradient(from 200deg,#F9CE34,#EE2A7B,#6228D7,#F9CE34)}
+.ring img{width:84px;height:84px;border-radius:50%;border:3px solid #fff;object-fit:cover}
+.ig-head b{font-size:18px;display:block}
+.ig-head small{font-size:14px;color:var(--muted)}
+.ig-bio{margin:18px 0 18px;font-size:15px;line-height:1.6;color:#2a2925}
+.ig-bio strong{display:block;margin-bottom:4px}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;border-radius:12px;overflow:hidden}
+.ig-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.ig-actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.ig-actions a{flex:1;text-align:center;padding:11px 14px;border-radius:12px;font-weight:600;font-size:14px;background:var(--paper2);transition:background .2s}
+.ig-actions a.follow{background:#0095F6;color:#fff}
+.ig-actions a:hover{background:var(--ink);color:var(--paper)}
+.pappa{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;background:var(--ink);color:var(--paper);border-radius:22px;padding:24px 28px}
+.pappa span{color:var(--stone);font-size:14px;display:block}
+.pappa a{color:var(--live);font-weight:600}
+
+.steps{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:56px}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+.price{display:grid;gap:40px;margin-top:56px}
+@media(min-width:900px){.price{grid-template-columns:1fr 1fr;align-items:start}}
+.pcard{border:1px solid var(--line);border-radius:28px;padding:40px;background:linear-gradient(160deg,var(--ink2),var(--ink));position:relative;overflow:hidden}
+.pcard::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:var(--live);opacity:.08;filter:blur(60px);right:-120px;top:-120px}
+.amount{font-family:'Instrument Serif',serif;font-size:clamp(80px,12vw,110px);line-height:1;letter-spacing:-.02em}
+.amount small{font-family:'Inter Tight';font-size:16px;color:var(--stone);letter-spacing:0;margin-left:6px}
+.pcard ul{list-style:none;margin:30px 0 34px;display:grid;gap:14px}
+.pcard li{display:flex;gap:14px;align-items:flex-start}
+.pcard li::before{content:"";flex:0 0 7px;height:7px;border-radius:50%;background:var(--live);margin-top:9px}
+.extra{display:grid;gap:12px}
+.extra div{border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.extra b{display:block;font-size:16px;font-weight:600;margin-bottom:4px}
+.extra span{color:var(--stone);font-size:15px}
+
+.faq{margin-top:48px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:26px 0}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-size:20px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Instrument Serif',serif;font-size:32px;line-height:.8;color:var(--stone);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--stone);margin-top:14px;max-width:62ch;animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-6px)}}
+
+.final{text-align:center;padding:130px 0}
+.final h2{margin:22px auto 34px;max-width:14ch}
+.final .cta{justify-content:center}
+.final .num{margin-top:26px;color:var(--stone);font-size:15px}
+.final .num a{color:var(--paper);border-bottom:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:30px 0 100px;font-size:14px;color:var(--stone)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between}
+footer a:hover{color:var(--paper)}
+.fab{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-weight:600;padding:13px 20px;border-radius:99px;box-shadow:0 14px 30px -10px #0009;transition:transform .25s}
+.fab:hover{transform:translateY(-3px)}
+.fab svg{width:20px;height:20px}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<header id="top"><div class="wrap">
+  <nav>
+    <a class="brand" href="#"><span class="mark">W</span>Website in Ahmedabad</a>
+    <div class="links"><a href="#what">What you get</a><a href="#features">Features</a><a href="#work">Work</a><a href="#about">Who we are</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
+    <a class="btn sm" href="https://wa.me/919924894090?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business">WhatsApp us</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Single-page websites · Ahmedabad</span>
+      <h1 class="split">A website made for <i>your</i> business.</h1>
+      <p class="lead" data-r style="--d:.5s">One clean page with everything your customers need to know, designed only for you. We use AI tools to build faster, and our team finishes every detail by hand.</p>
+      <div class="cta" data-r style="--d:.65s">
+        <a class="btn" href="#work">See our work</a>
+        <a class="btn line" href="https://wa.me/919924894090?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business">WhatsApp us</a>
+      </div>
+      <p class="note" data-r style="--d:.8s">₹4,999 one-time · Live in 48 hours · Call <a href="tel:+919924894090" style="color:var(--paper)">99248 94090</a></p>
+    </div>
+
+    <div class="stage" data-r style="--d:.3s">
+      <span class="rec"><span class="dot"></span>Now showing <b id="siteName">theloudstudio.com</b></span>
+      <div class="laptop">
+        <div class="lap-screen">
+          <div class="bar"><i></i><i></i><i></i><span class="url"><span class="lock"></span><span id="siteUrl">theloudstudio.com</span></span></div>
+          <div class="view" id="deskView">
+            <img class="on" src="samples/loud-desktop-full.jpg" alt="The Loud Studio website on desktop">
+            <img src="samples/pappa-desktop-full.jpg" alt="Amdavadi Pappa website on desktop" loading="lazy">
+            <img src="samples/yash-desktop-full.jpg" alt="Yash Sharma Digital website on desktop" loading="lazy">
+          </div>
+        </div>
+        <div class="lap-base"></div>
+      </div>
+      <div class="phone">
+        <span class="notch"></span>
+        <div class="view" id="phoneView">
+          <img class="on" src="samples/loud-mobile-full.jpg" alt="The Loud Studio website on mobile">
+          <img src="samples/pappa-mobile-full.jpg" alt="Amdavadi Pappa website on mobile" loading="lazy">
+          <img src="samples/yash-mobile-full.jpg" alt="Yash Sharma Digital website on mobile" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="band"><div class="wrap">
+  <a class="backed" href="#about" data-r>
+    <span class="avs"><img src="team/yash-avatar.jpg" alt="Yash Sharma"><img src="team/loud-avatar.jpg" alt="The Loud Studio"></span>
+    <p>By <b>Yash Sharma Digital</b> &amp; <b>The Loud Studio</b><br>A real Ahmedabad team. Meet us →</p>
+  </a>
+  <div class="stats" data-r style="--d:.15s">
+    <div><b><span data-count="3">3</span> yrs</b>in Ahmedabad</div>
+    <div><b><span data-count="300">300</span>+</b>businesses</div>
+    <div><b><span data-count="2000">2,000</span>+</b>videos made</div>
+  </div>
+</div></div>
+
+<section id="what"><div class="wrap">
+  <div class="kick" data-r><span class="dot"></span>What you get</div>
+  <h2 data-r>One page. Every detail. <i>Made for you.</i></h2>
+  <p class="sub" data-r>An informational website for any kind of business. Not a template with your name swapped in: your colours, your photos, your words.</p>
+  <div class="cards four">
+    <div class="card" data-r><div class="n">01</div><h3>Single page</h3><p>Everything on one smooth, scrolling page. Easy to share, easy to read on a phone.</p></div>
+    <div class="card" data-r style="--d:.1s"><div class="n">02</div><h3>Fully customised</h3><p>Designed around your business: layout, colours, fonts and content chosen for you.</p></div>
+    <div class="card" data-r style="--d:.2s"><div class="n">03</div><h3>Built with AI, finished by people</h3><p>AI tools let us build in hours instead of weeks. Our team checks and polishes every section.</p></div>
+    <div class="card hl" data-r style="--d:.3s"><div class="n">04</div><h3>Live in 48 hours</h3><p>Fast, secure, mobile-first, on your own domain.</p></div>
+  </div>
+</div></section>
+
+<section id="features" class="light"><div class="wrap">
+  <div class="kick" data-r>Features</div>
+  <h2 data-r>Pick what goes on <i>your page.</i></h2>
+  <p class="sub" data-r>Every website includes the essentials. Add whichever sections fit your business.</p>
+  <div class="feat">
+    <div class="f core" data-r><b>Mobile-first design</b><span>Looks right on every phone, tablet and laptop</span></div>
+    <div class="f core" data-r style="--d:.05s"><b>WhatsApp button</b><span>Customers message you in one tap</span></div>
+    <div class="f core" data-r style="--d:.1s"><b>Map & directions</b><span>Google Maps location, address and timings</span></div>
+    <div class="f" data-r><b>Services or menu with prices</b><span>Packages, menus, rate cards</span></div>
+    <div class="f" data-r style="--d:.05s"><b>Photo gallery</b><span>Your work, space, products or food</span></div>
+    <div class="f" data-r style="--d:.1s"><b>Google reviews</b><span>Show what customers already say about you</span></div>
+    <div class="f" data-r><b>About & story</b><span>Who you are and why people choose you</span></div>
+    <div class="f" data-r style="--d:.05s"><b>Click-to-call</b><span>A call button that dials directly</span></div>
+    <div class="f" data-r style="--d:.1s"><b>Offers banner</b><span>Seasonal deals, festive offers, announcements</span></div>
+    <div class="f" data-r><b>Videos & reels</b><span>Embed your best reels or YouTube videos</span></div>
+    <div class="f" data-r style="--d:.05s"><b>Instagram link</b><span>Send visitors to your latest posts</span></div>
+    <div class="f" data-r style="--d:.1s"><b>Team</b><span>Introduce the people behind the business</span></div>
+    <div class="f" data-r><b>FAQ</b><span>Answer common questions before they ask</span></div>
+    <div class="f" data-r style="--d:.05s"><b>Enquiry form</b><span>Collect name, number and requirement</span></div>
+    <div class="f" data-r style="--d:.1s"><b>English, Gujarati or Hindi</b><span>Or switch between languages</span></div>
+    <div class="f" data-r><b>Google-ready basics</b><span>Proper titles, descriptions and fast loading</span></div>
+    <div class="f" data-r style="--d:.05s"><b>Secure HTTPS</b><span>The padlock in the address bar, included</span></div>
+    <div class="f" data-r style="--d:.1s"><b>Your own domain</b><span>yourbusiness.in or .com</span></div>
+  </div>
+  <div class="marquee"><div class="track">
+    <span>Cafes & restaurants</span><span>Salons & makeup artists</span><span>Clinics</span><span>Gyms</span><span>Coaching classes</span><span>Photographers</span><span>Boutiques</span><span>Studios</span><span>Event planners</span><span>Home bakers</span><span>Interior designers</span><span>Real estate</span>
+    <span aria-hidden="true">Cafes & restaurants</span><span aria-hidden="true">Salons & makeup artists</span><span aria-hidden="true">Clinics</span><span aria-hidden="true">Gyms</span><span aria-hidden="true">Coaching classes</span><span aria-hidden="true">Photographers</span><span aria-hidden="true">Boutiques</span><span aria-hidden="true">Studios</span><span aria-hidden="true">Event planners</span><span aria-hidden="true">Home bakers</span><span aria-hidden="true">Interior designers</span><span aria-hidden="true">Real estate</span>
+  </div></div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="kick" data-r><span class="dot"></span>Work</div>
+  <h2 data-r>Websites we've <i>built.</i></h2>
+  <p class="sub" data-r>Hover a card to scroll through the site.</p>
+  <div class="work">
+    <a class="w" href="https://www.theloudstudio.com" target="_blank" rel="noopener" data-r>
+      <div class="shot"><img src="samples/loud-desktop-full.jpg" alt="The Loud Studio website" loading="lazy"></div>
+      <div class="meta"><b>The Loud Studio</b><span>Podcast & reels studio · Vastral</span><br><em>theloudstudio.com ↗</em></div>
+    </a>
+    <a class="w" href="https://www.amdavadipappa.com" target="_blank" rel="noopener" data-r style="--d:.1s">
+      <div class="shot"><img src="samples/pappa-desktop-full.jpg" alt="Amdavadi Pappa website" loading="lazy"></div>
+      <div class="meta"><b>Amdavadi Pappa</b><span>Gujarati animated series · bilingual</span><br><em>amdavadipappa.com ↗</em></div>
+    </a>
+    <a class="w" href="https://www.yashsharmadigital.com" target="_blank" rel="noopener" data-r style="--d:.2s">
+      <div class="shot"><img src="samples/yash-desktop-full.jpg" alt="Yash Sharma Digital website" loading="lazy"></div>
+      <div class="meta"><b>Yash Sharma Digital</b><span>Content & social media agency</span><br><em>yashsharmadigital.com ↗</em></div>
+    </a>
+  </div>
+</div></section>
+
+<section id="about" class="light"><div class="wrap">
+  <div class="kick" data-r>Who we are</div>
+  <div class="about-top">
+    <div>
+      <h2 data-r>Real people. Real work. <i>Right here in Ahmedabad.</i></h2>
+      <p class="big" data-r style="margin-top:28px">Website in Ahmedabad is a new venture from <b>Yash Sharma Digital</b> and <b>The Loud Studio</b>. For 3 years we've made content and ads for 300+ Ahmedabad businesses. Now we're starting something small and new: fast, easy websites built with AI tools, at a launch price every local business can afford.</p>
+    </div>
+    <div class="trust">
+      <div data-r><p><b>A team you can meet</b><span>Visit our studio at Nirant Cross Road, Vastral.</span></p></div>
+      <div data-r style="--d:.1s"><p><b>A number you can call</b><span>Talk to a real person: <a href="tel:+919924894090" style="color:var(--ink);font-weight:600">99248 94090</a></span></p></div>
+      <div data-r style="--d:.2s"><p><b>You see it before it goes live</b><span>Check your website, ask for changes, then decide.</span></p></div>
+    </div>
+  </div>
+
+  <div class="igs">
+    <div class="ig" data-r>
+      <div class="ig-head">
+        <span class="ring"><img src="team/yash-avatar.jpg" alt="Yash Sharma"></span>
+        <div><b>yashsharma.digital</b><small>Yash Sharma · Content creation & advertising agency</small></div>
+      </div>
+      <div class="ig-bio"><strong>Yash Sharma Digital</strong>Content creation & advertising for Ahmedabad brands. 300+ businesses, 2,000+ videos. Production by @theloudstudio_</div>
+      <div class="ig-grid"><img src="team/yash-1.jpg" alt="Yash Sharma Digital post" loading="lazy"><img src="team/yash-2.jpg" alt="Yash Sharma Digital post" loading="lazy"><img src="team/yash-3.jpg" alt="Yash Sharma Digital post" loading="lazy"></div>
+      <div class="ig-actions"><a class="follow" href="https://instagram.com/yashsharma.digital" target="_blank" rel="noopener">View Instagram</a><a href="https://www.yashsharmadigital.com" target="_blank" rel="noopener">Website ↗</a></div>
+    </div>
+    <div class="ig" data-r style="--d:.12s">
+      <div class="ig-head">
+        <span class="ring"><img src="team/loud-avatar.jpg" alt="The Loud Studio"></span>
+        <div><b>theloudstudio_</b><small>The Loud Studio · Podcast & reels studio</small></div>
+      </div>
+      <div class="ig-bio"><strong>The Loud Studio</strong>Ahmedabad's creative content studio. 8 shoot-ready sets, camera & iPhone shoots, professional direction. Nirant Cross Road, Vastral.</div>
+      <div class="ig-grid"><img src="team/loud-1.jpg" alt="The Loud Studio post" loading="lazy"><img src="team/loud-2.jpg" alt="The Loud Studio post" loading="lazy"><img src="team/loud-3.jpg" alt="The Loud Studio post" loading="lazy"></div>
+      <div class="ig-actions"><a class="follow" href="https://instagram.com/theloudstudio_" target="_blank" rel="noopener">View Instagram</a><a href="https://www.theloudstudio.com" target="_blank" rel="noopener">Website ↗</a></div>
+    </div>
+  </div>
+  <div class="pappa" data-r>
+    <p><b>Amdavadi Pappa</b><span>Our own Gujarati animated series · @amdavadipappa</span></p>
+    <a href="https://www.amdavadipappa.com" target="_blank" rel="noopener">amdavadipappa.com ↗</a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="kick" data-r>How it works</div>
+  <h2 data-r>Three steps. <i>No long meetings.</i></h2>
+  <div class="steps">
+    <div class="card" data-r><div class="n">01</div><h3>Share your details</h3><p>Send us your Instagram or Google listing on WhatsApp. That's usually all we need.</p></div>
+    <div class="card" data-r style="--d:.1s"><div class="n">02</div><h3>We design it</h3><p>We build your page and send you the first version to see on your phone.</p></div>
+    <div class="card hl" data-r style="--d:.2s"><div class="n">03</div><h3>Changes & go live</h3><p>Up to 3 rounds of changes, pay ₹4,999, and it's live on your domain within 48 hours.</p></div>
+  </div>
+</div></section>
+
+<section id="pricing" style="padding-top:0"><div class="wrap">
+  <div class="kick" data-r><span class="dot"></span>Pricing</div>
+  <h2 data-r>One price. <i>No surprises.</i></h2>
+  <div class="price">
+    <div class="pcard" data-r>
+      <div class="amount">₹4,999<small>one-time</small></div>
+      <ul>
+        <li>Custom single-page website for your business</li>
+        <li>Pick any sections from the features list</li>
+        <li>WhatsApp button, map and timings</li>
+        <li>3 rounds of revisions included</li>
+        <li>Live within 48 hours</li>
+        <li>Hosting free for the first year</li>
+      </ul>
+      <a class="btn" href="https://wa.me/919924894090?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business">WhatsApp us</a>
+    </div>
+    <div class="extra">
+      <div data-r><b>Domain: separate from ₹4,999</b><span>Already have one? Just give us access. Don't have one? A new domain usually costs ₹500–1,000 a year, paid at actual cost.</span></div>
+      <div data-r style="--d:.1s"><b>Hosting: free for 1 year</b><span>We host your website free for the first year.</span></div>
+      <div data-r style="--d:.2s"><b>More than 3 revisions?</b><span>Extra changes after 3 rounds are charged separately. We'll tell you the cost before we start.</span></div>
+      <div data-r style="--d:.3s"><b>Easy payment</b><span>UPI or card through Razorpay.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+  <div class="kick" data-r>FAQ</div>
+  <h2 data-r>Questions, <i>answered.</i></h2>
+  <div class="faq" data-r>
+    <details><summary>How is it so fast?</summary><p>We use AI tools for the heavy lifting, so the first version takes hours, not weeks. Then our team reviews and polishes every section before you see it.</p></details>
+    <details><summary>Is it a template?</summary><p>No. Each website is designed for one business: its colours, content, photos and the sections it actually needs.</p></details>
+    <details><summary>Can I change things?</summary><p>Yes. You get 3 rounds of revisions with your changes included. After that, further changes are charged separately.</p></details>
+    <details><summary>Is the website mine?</summary><p>Yes. It runs on your own domain, in your business name.</p></details>
+    <details><summary>Will it show on Google?</summary><p>Once live, you can directly paste the link into your Google Business Profile, Instagram bio, or anywhere else you're already listed.</p></details>
+    <details><summary>What about the domain and hosting?</summary><p>Hosting is free for the first year. The domain is separate from the ₹4,999: if you already have one, just give us access. If you don't, a new domain usually costs ₹500–1,000 a year.</p></details>
+    <details><summary>Can I get more than one page?</summary><p>Our ₹4,999 website is a single page. Need more pages? Tell us and we'll share a quote.</p></details>
+    <details><summary>Are you a real company?</summary><p>Yes. We're the team behind Yash Sharma Digital and The Loud Studio. You can visit our studio at Nirant Cross Road, Vastral, or call us on 99248 94090.</p></details>
+  </div>
+</div></section>
+
+<div class="final"><div class="wrap">
+  <span class="eyebrow" style="justify-content:center" data-r><span class="dot"></span>Live in 48 hours</span>
+  <h2 data-r>Your business deserves <i>to be found.</i></h2>
+  <div class="cta" data-r>
+    <a class="btn" href="https://wa.me/919924894090?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business">WhatsApp us</a>
+    <a class="btn line" href="tel:+919924894090">Call 99248 94090</a>
+  </div>
+  <p class="num" data-r>Or follow us on <a href="https://instagram.com/websiteinahmedabad">@websiteinahmedabad</a></p>
+</div></div>
+
+<footer><div class="wrap">
+  <span>© 2026 Website in Ahmedabad · by Yash Sharma Digital &amp; The Loud Studio</span>
+  <span><a href="https://instagram.com/websiteinahmedabad">Instagram</a> · <a href="https://wa.me/919924894090">WhatsApp</a> · <a href="tel:+919924894090">99248 94090</a></span>
+</div></footer>
+
+<a class="fab" href="https://wa.me/919924894090?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business" aria-label="WhatsApp us">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Split the H1 into words for a staggered entrance.
+  document.querySelectorAll('h1.split').forEach(h => {
+    let i = 0;
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const f = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(t => {
+          if (!t.trim()) { f.append(t); return; }
+          const s = document.createElement('span'); s.className = 'wd'; s.style.setProperty('--i', i++); s.textContent = t; f.append(s);
+        });
+        c.replaceWith(f);
+      } else if (c.nodeType === 1) { c.classList.add('wd'); c.style.setProperty('--i', i++); }
+    });
+    walk(h);
+  });
+
+  // Reveal on scroll.
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  // Content already on screen stays visible; only below-the-fold blocks animate in.
+  document.querySelectorAll('[data-r]').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pending'); io.observe(el); } });
+  // Safety net: never leave above-the-fold content hidden.
+  setTimeout(() => document.querySelectorAll('[data-r]').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }), 1500);
+
+  // Count-up stats.
+  const cio = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; cio.unobserve(e.target);
+    const el = e.target, to = +el.dataset.count, t0 = performance.now();
+    if (reduce) return;
+    const step = t => { const p = Math.min((t - t0) / 1400, 1); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('en-IN'); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }), { threshold: .6 });
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // Header border once scrolled.
+  const hd = document.getElementById('top');
+  addEventListener('scroll', () => hd.classList.toggle('scrolled', scrollY > 10), { passive: true });
+
+  // Hero "screen recording": scroll each site on laptop + phone, then switch to the next one.
+  const sites = ['theloudstudio.com', 'amdavadipappa.com', 'yashsharmadigital.com'];
+  const desk = [...document.querySelectorAll('#deskView img')], phone = [...document.querySelectorAll('#phoneView img')];
+  const nameEl = document.getElementById('siteName'), urlEl = document.getElementById('siteUrl');
+  let cur = 0, anims = [];
+  const DURATION = 9000;
+  function scrollIn(img, view) {
+    const dist = Math.max(0, img.getBoundingClientRect().height - view.getBoundingClientRect().height);
+    return img.animate([
+      { transform: 'translateY(0)', offset: 0 },
+      { transform: 'translateY(0)', offset: .1 },
+      { transform: `translateY(-${dist}px)`, offset: .9 },
+      { transform: `translateY(-${dist}px)`, offset: 1 }
+    ], { duration: DURATION, easing: 'cubic-bezier(.45,.05,.55,.95)', fill: 'forwards' });
+  }
+  function show(i) {
+    anims.forEach(a => a.cancel());
+    [desk, phone].forEach(set => set.forEach((im, k) => im.classList.toggle('on', k === i)));
+    nameEl.textContent = urlEl.textContent = sites[i];
+    if (reduce) return;
+    const go = () => { anims = [scrollIn(desk[i], desk[i].parentElement), scrollIn(phone[i], phone[i].parentElement)]; };
+    const ready = [desk[i], phone[i]].map(im => im.complete ? Promise.resolve() : new Promise(r => { im.onload = r; im.onerror = r; }));
+    Promise.all(ready).then(go);
+  }
+  [...desk, ...phone].forEach(im => im.loading = 'eager');
+  show(0);
+  if (!reduce) setInterval(() => { cur = (cur + 1) % sites.length; show(cur); }, DURATION + 600);
+})();
+</script>
+</body>
+</html>
