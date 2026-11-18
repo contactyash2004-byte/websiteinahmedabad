@@ -9,6 +9,14 @@
  },
  {
   "date": "2026-11-18",
+  "slug": "animesh-yoga-studio",
+  "name": "Animesh Yoga Studio",
+  "area": "Thaltej, Ahmedabad",
+  "category": "Yoga & fitness studios",
+  "url": "https://websiteinahmedabad.in/p/animesh-yoga-studio/"
+ },
+ {
+  "date": "2026-11-18",
   "slug": "anita-goyals-phonics",
   "name": "Anita Goyal's Phonics and English Classes",
   "area": "Vastrapur, Ahmedabad",
@@ -17,11 +25,27 @@
  },
  {
   "date": "2026-11-18",
+  "slug": "house-of-furr",
+  "name": "House of Furr",
+  "area": "Gulbai Tekra, Ahmedabad",
+  "category": "Pet boarding & grooming",
+  "url": "https://websiteinahmedabad.in/p/house-of-furr/"
+ },
+ {
+  "date": "2026-11-18",
   "slug": "miracle-makeup-studio",
   "name": "Miracle Makeup Studio & Beauty Care",
   "area": "Ramol, Ahmedabad",
   "category": "Bridal & makeup studios",
   "url": "https://websiteinahmedabad.in/p/miracle-makeup-studio/"
+ },
+ {
+  "date": "2026-11-18",
+  "slug": "nimos-cafe",
+  "name": "Nimo's Café",
+  "area": "South Bopal, Ahmedabad",
+  "category": "Cafés",
+  "url": "https://websiteinahmedabad.in/p/nimos-cafe/"
  },
  {
   "date": "2026-11-18",
@@ -46,5 +70,13 @@
   "area": "Nava Vadaj, Ahmedabad",
   "category": "Bridal & makeup studios",
   "url": "https://websiteinahmedabad.in/p/the-monika-makeup/"
+ },
+ {
+  "date": "2026-11-18",
+  "slug": "unstoppable-dance-studio",
+  "name": "Unstoppable Dance Studio & Events",
+  "area": "Vastrapur, Ahmedabad",
+  "category": "Dance studios",
+  "url": "https://websiteinahmedabad.in/p/unstoppable-dance-studio/"
  }
 ]
