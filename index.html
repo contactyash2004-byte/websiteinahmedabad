@@ -124,7 +124,7 @@ h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,6vw
 @keyframes slide{to{transform:translateX(-50%)}}
 
 .work{display:grid;gap:22px;margin-top:56px}
-@media(min-width:900px){.work{grid-template-columns:repeat(6,1fr)}.work .w{grid-column:span 2}.work .w.big{grid-column:span 3}}
+@media(min-width:900px){.work{grid-template-columns:repeat(3,1fr)}}
 .w{display:block;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--ink2);transition:transform .3s,border-color .3s}
 .w:hover{transform:translateY(-6px);border-color:var(--stone)}
 .w .shot{aspect-ratio:16/10;overflow:hidden}
@@ -238,8 +238,6 @@ footer a:hover{color:var(--paper)}
             <img class="on" src="samples/loud-desktop-full.jpg" alt="The Loud Studio website on desktop">
             <img src="samples/pappa-desktop-full.jpg" alt="Amdavadi Pappa website on desktop" loading="lazy">
             <img src="samples/yash-desktop-full.jpg" alt="Yash Sharma Digital website on desktop" loading="lazy">
-            <img src="samples/anita-desktop-full.jpg" alt="Anita Goyal’s Phonics and English Classes website on desktop" loading="lazy">
-            <img src="samples/nidhi-desktop-full.jpg" alt="Nidhi Sompura portfolio website on desktop" loading="lazy">
           </div>
         </div>
         <div class="lap-base"></div>
@@ -250,8 +248,6 @@ footer a:hover{color:var(--paper)}
           <img class="on" src="samples/loud-mobile-full.jpg" alt="The Loud Studio website on mobile">
           <img src="samples/pappa-mobile-full.jpg" alt="Amdavadi Pappa website on mobile" loading="lazy">
           <img src="samples/yash-mobile-full.jpg" alt="Yash Sharma Digital website on mobile" loading="lazy">
-          <img src="samples/anita-mobile-full.jpg" alt="Anita Goyal’s Phonics and English Classes website on mobile" loading="lazy">
-          <img src="samples/nidhi-mobile-full.jpg" alt="Nidhi Sompura portfolio website on mobile" loading="lazy">
         </div>
       </div>
     </div>
@@ -317,14 +313,6 @@ footer a:hover{color:var(--paper)}
   <h2 data-r>Websites we've <i>built.</i></h2>
   <p class="sub" data-r>Hover a card to scroll through the site.</p>
   <div class="work">
-    <a class="w big" href="https://anitagoyalls.com/" target="_blank" rel="noopener" data-r>
-      <div class="shot"><img src="samples/anita-desktop-full.jpg" alt="Anita Goyal’s Phonics and English Classes website" loading="lazy"></div>
-      <div class="meta"><b>Anita Goyal’s Phonics &amp; English Classes</b><span>Phonics &amp; spoken English classes · Vastrapur</span><br><em>anitagoyalls.com ↗</em></div>
-    </a>
-    <a class="w big" href="https://nidhisompura.com/" target="_blank" rel="noopener" data-r style="--d:.1s">
-      <div class="shot"><img src="samples/nidhi-desktop-full.jpg" alt="Nidhi Sompura portfolio website" loading="lazy"></div>
-      <div class="meta"><b>Nidhi Sompura</b><span>Portfolio · video director &amp; presenter</span><br><em>nidhisompura.com ↗</em></div>
-    </a>
     <a class="w" href="https://www.theloudstudio.com" target="_blank" rel="noopener" data-r>
       <div class="shot"><img src="samples/loud-desktop-full.jpg" alt="The Loud Studio website" loading="lazy"></div>
       <div class="meta"><b>The Loud Studio</b><span>Podcast & reels studio · Vastral</span><br><em>theloudstudio.com ↗</em></div>
@@ -595,7 +583,7 @@ footer a:hover{color:var(--paper)}
   addEventListener('scroll', () => hd.classList.toggle('scrolled', scrollY > 10), { passive: true });
 
   // Hero "screen recording": scroll each site on laptop + phone, then switch to the next one.
-  const sites = ['theloudstudio.com', 'amdavadipappa.com', 'yashsharmadigital.com', 'anitagoyalls.com', 'nidhisompura.com'];
+  const sites = ['theloudstudio.com', 'amdavadipappa.com', 'yashsharmadigital.com'];
   const desk = [...document.querySelectorAll('#deskView img')], phone = [...document.querySelectorAll('#phoneView img')];
   const nameEl = document.getElementById('siteName'), urlEl = document.getElementById('siteUrl');
   let cur = 0, anims = [];
