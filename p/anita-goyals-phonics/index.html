@@ -499,7 +499,9 @@ function play(i){cur=i;timers.forEach(clearTimeout);timers=[];[].forEach.call(wo
 document.getElementById("again").onclick=function(){play(cur)};
 var started=false,io2=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!started){started=true;play(0)}},{threshold:.4});io2.observe(document.querySelector(".board"));
 /* classroom: muted autoplay while visible */
-var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){if(v.preload==="none")v.preload="auto";var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.35});
+var onv=new Set();function vp(v){if(v.preload==="none")v.preload="auto";var p=v.play();if(p&&p.catch)p.catch(function(){})}
+var vio=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){onv.add(v);vp(v)}else{onv.delete(v);v.pause()}})},{threshold:.35});
+document.addEventListener("visibilitychange",function(){if(!document.hidden)onv.forEach(vp)});
 document.querySelectorAll("video[data-auto]").forEach(function(v){vio.observe(v)});
 /* one sound video at a time */
 function stopOthers(keep){document.querySelectorAll(".tc video,#stv").forEach(function(v){if(v!==keep&&!v.paused)v.pause()})}
