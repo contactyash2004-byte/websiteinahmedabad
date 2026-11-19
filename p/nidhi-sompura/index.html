@@ -430,7 +430,7 @@ document.addEventListener("click",function(e){
   var md=document.createElement("div");md.className="md";
   if(b.dataset.v){md.innerHTML='<div class="box vid"><video src="'+b.dataset.v+'" controls autoplay playsinline></video></div><button class="x" type="button">Close</button>'}
   else{var c=b.dataset.c;md.innerHTML='<div class="box"><iframe src="https://www.instagram.com/p/'+c+'/embed/" title="Instagram reel" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe></div><button class="x" type="button">Close</button><a class="ig" href="https://www.instagram.com/p/'+c+'/" target="_blank" rel="noopener">Open on Instagram ↗</a>'}
-  document.body.appendChild(md);document.body.style.overflow="hidden";
+  document.body.appendChild(md);document.body.style.overflow="hidden";var mv=md.querySelector("video");if(mv){var pp=mv.play();if(pp&&pp.catch)pp.catch(function(){mv.muted=true;mv.play().catch(function(){})})}
   [].forEach.call(document.querySelectorAll("video[data-auto]"),function(v){v.pause()});
   function close(){md.remove();document.body.style.overflow="";document.removeEventListener("keydown",k)}
   function k(ev){if(ev.key==="Escape")close()}
