@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&family=Noto+Serif+Gujarati:wght@400&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://nidhisompura.in/#nidhi","name":"Nidhi Sompura","url":"https://nidhisompura.in/","image":"https://nidhisompura.in/img/hero.jpg","jobTitle":["Content Director","Video Director","Presenter","Storyteller","Content Creator"],"description":"Video director, presenter, storyteller and creator from Ahmedabad. 1,000+ videos directed.","telephone":"+916351649248","address":{"@type":"PostalAddress","addressLocality":"Ahmedabad","addressRegion":"Gujarat","addressCountry":"IN"},"worksFor":{"@type":"Organization","name":"Yash Sharma Digital","url":"https://yashsharmadigital.com"},"knowsAbout":["Video direction","Storytelling","Presenting","Podcasts","Social media content","Ahmedabad heritage"],"sameAs":["https://www.instagram.com/nidhi_sompura_/"]}</script>
 <style>
-:root{--cream:#FBF4EC;--paper:#F6EADF;--blush:#F3DCD5;--blush2:#EAC7BF;--rose:#B85C6B;--wine:#6E2A36;--wine2:#5A212C;--cocoa:#3A2A26;--muted:#7C6A62;--sage:#9AA683;--gold:#C9A15B;--marigold:#E3A23B;--line:#E6D3C6;
+:root{--cream:#FBF4EC;--paper:#F6EADF;--blush:#F3DCD5;--blush2:#EAC7BF;--rose:#B85C6B;--wine:#6E2A36;--wine2:#5A212C;--cocoa:#3A2A26;--muted:#6A5850;--sage:#9AA683;--gold:#C9A15B;--marigold:#E3A23B;--line:#E6D3C6;
 --disp:'Cormorant Garamond',Georgia,serif;--script:'Pinyon Script',cursive;--sans:'Jost',system-ui,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -94,7 +94,7 @@ nav .bar{pointer-events:auto;display:flex;align-items:center;justify-content:spa
 @keyframes spin{to{transform:rotate(360deg)}}
 .hero .lede{text-align:center;max-width:620px;margin:54px auto 0}
 .hero .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
-@media (max-width:760px){.collage{height:520px}.arch{width:250px;top:10px}.pol.l{width:150px;left:-6px;top:250px}.pol.r{width:150px;right:-6px;top:30px}.pol{padding:8px 8px 34px}.pol figcaption{font-size:18px;bottom:6px}.stamp{left:auto;right:4px;bottom:-6px;width:112px;height:112px}.stamp b{font-size:25px}.sun{right:6%;top:auto;bottom:40px;width:60px}}
+@media (max-width:760px){.collage{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:26px 14px;padding-top:6px}.arch{position:relative;left:auto;top:auto;transform:none;grid-column:1/-1;order:-1;justify-self:center;width:min(72%,270px)}.pol{position:relative;padding:8px 8px 34px}.pol.l,.pol.r{left:auto;right:auto;top:auto;width:auto}.pol.l{transform:rotate(-4deg);margin-top:8px}.pol.r{transform:rotate(4deg);margin-top:30px}.pol figcaption{font-size:19px;bottom:6px}.stamp{left:auto;right:0;bottom:auto;top:250px;width:104px;height:104px}.stamp b{font-size:23px}.stamp b small{font-size:7.5px;letter-spacing:.16em}.sun{right:auto;left:2%;top:4px;width:54px}.sparkle.s1{left:8%;top:30%}.sparkle.s2{right:6%;top:6%}.sparkle.s3{display:none}}
 
 /* marquee */
 .mq{background:var(--blush);overflow:hidden;padding:22px 0;border-block:1px solid var(--blush2)}
@@ -172,15 +172,14 @@ nav .bar{pointer-events:auto;display:flex;align-items:center;justify-content:spa
 .cat .ch p{color:var(--muted);max-width:400px;font-size:15.5px}
 .shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .shelf.c5{grid-template-columns:repeat(5,1fr);gap:18px}
-@media (max-width:1000px){.shelf,.shelf.c5{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:46%;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 24px;margin:0 -20px;scrollbar-width:none;gap:16px}.shelf::-webkit-scrollbar{display:none}.shelf>*{scroll-snap-align:start}}
-@media (max-width:560px){.shelf,.shelf.c5{grid-auto-columns:64%}}
-.swipe{display:none;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:-6px}
-@media (max-width:1000px){.swipe{display:block}}
+@media (max-width:1000px){.shelf,.shelf.c5{grid-template-columns:repeat(3,1fr);gap:18px 14px}}
+@media (max-width:640px){.shelf,.shelf.c5{grid-template-columns:1fr 1fr;gap:20px 12px}.rc .th{border-width:4px;border-radius:14px}.rc b{font-size:18px;margin-top:10px}.rc small{font-size:10.5px;letter-spacing:.06em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rc .pl{width:38px;height:38px;right:8px;bottom:8px}.rc .tg{font-size:9px;left:8px;top:8px;padding:4px 8px}.cat .ch{margin-bottom:22px}}
+.swipe{display:none}
 .cat.heritage{margin-top:80px;padding:80px 0 90px;background:var(--blush);border-radius:40px;position:relative;overflow:hidden}
-.cat.heritage::before{content:"";position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%236E2A36' stroke-width='1'%3E%3Cpath d='M24 2l6 16 16 6-16 6-6 16-6-16-16-6 16-6z'/%3E%3C/g%3E%3C/svg%3E")}
+.cat.heritage::before{content:"";position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%236E2A36' stroke-width='1'%3E%3Cpath d='M24 2l6 16 16 6-16 6-6 16-6-16-16-6 16-6z'/%3E%3C/g%3E%3C/svg%3E")}
 .cat.heritage .in{position:relative;padding:0 clamp(20px,4vw,56px)}
-.cat.heritage .ch{border-color:var(--blush2)}
-@media (max-width:1000px){.cat.heritage{border-radius:28px}.cat.heritage .shelf{margin:0 calc(-1 * clamp(20px,4vw,56px));padding-left:clamp(20px,4vw,56px)}}
+.cat.heritage .ch{border-color:#6E2A3633}.cat.heritage h3{color:var(--cocoa)}.cat.heritage h3 em,.cat.heritage .num{color:var(--wine)}.cat.heritage .ch p,.cat.heritage .rc small{color:#4a3a34}.cat.heritage .rc b{color:var(--cocoa)}
+@media (max-width:1000px){.cat.heritage{border-radius:28px}}
 
 /* modal */
 .md{position:fixed;inset:0;z-index:400;background:#2A1D1Bee;display:grid;place-items:center;padding:20px}
@@ -239,6 +238,8 @@ nav .bar{pointer-events:auto;display:flex;align-items:center;justify-content:spa
 .contact .num{margin-top:26px;font-size:14px;letter-spacing:.14em;color:var(--wine)}
 .contact .sunbig{position:absolute;width:180px;left:-40px;bottom:-40px;opacity:.9;animation:sway 9s ease-in-out infinite}
 .contact .sunbig.r{left:auto;right:-30px;top:40px;bottom:auto;width:120px}
+.contact .wrap{position:relative;z-index:1}
+@media (max-width:760px){.contact{padding:100px 0 130px}.contact .sunbig{width:96px;left:-26px;bottom:-26px}.contact .sunbig.r{width:64px;right:-14px;top:24px}}
 footer{background:var(--wine2);color:#FBF4ECb3;font-size:13.5px;padding:30px 0 calc(30px + env(safe-area-inset-bottom))}
 footer .r{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap}
 footer a{color:var(--cream);font-weight:500}
@@ -272,7 +273,7 @@ footer a{color:var(--cream);font-weight:500}
     <svg class="sparkle s1" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
     <svg class="sparkle s2" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
     <svg class="sparkle s3" viewBox="0 0 24 24" aria-hidden="true"><use href="#spark"/></svg>
-    <div class="stamp" aria-hidden="true"><svg viewBox="0 0 132 132"><defs><path id="c" d="M66 66m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text font-family="Jost" font-size="9.5" letter-spacing="3"><textPath href="#c" fill="#FBF4EC">VIDEOS DIRECTED ✿ AHMEDABAD ✿ SINCE 2023 ✿</textPath></text></svg><b>1000+<small>VIDEOS</small></b></div>
+    <div class="stamp" aria-hidden="true"><svg viewBox="0 0 132 132"><defs><path id="c" d="M66 66m-50 0a50 50 0 1 1 100 0a50 50 0 1 1-100 0"/></defs><text font-family="Jost" font-size="9.5" letter-spacing="3"><textPath href="#c" fill="#FBF4EC">DIRECTOR ✿ PRESENTER ✿ STORYTELLER ✿</textPath></text></svg><b>1000+<small>VIDEOS<br>DIRECTED</small></b></div>
   </div>
   <p class="lede rv">Stories from the old lanes of Ahmedabad, told on camera. A director behind the lens, a presenter in front of it.</p>
   <div class="cta rv"><a class="btn rose" href="#work">Watch her work</a><a class="btn line" href="#contact">Work with Nidhi</a></div>
@@ -327,9 +328,9 @@ footer a{color:var(--cream);font-weight:500}
   <div class="center"><span class="cap rv">The journey</span><h2 class="rv" style="margin-top:16px">From intern to <em>content director.</em></h2></div>
   <div class="tl">
     <div class="st rv"><div class="yr">2023</div><h3>Zee</h3><p>Her first step into media: a three-month internship.</p><span class="tag">Intern</span></div>
-    <div class="st rv"><div class="yr">December 2023</div><h3>Nirbhay</h3><p>Joined the Nirbhay team.</p></div>
+    <div class="st rv"><div class="yr">December 2023</div><h3>Nirbhay</h3><p>In front of the camera as a news anchor, while also running the channel’s social media.</p><span class="tag">News Anchor &amp; Social Media Manager</span></div>
     <div class="st rv"><div class="yr">October 2024</div><h3>Zee</h3><p>Back at Zee, running social media for about six months.</p><span class="tag">Social Media Manager</span></div>
-    <div class="st rv"><div class="yr">July 2025</div><h3>Offbeat</h3><p>Joined the Offbeat team.</p></div>
+    <div class="st rv"><div class="yr">July 2025</div><h3>Offbeat</h3><p>Planning and growing social media for the brand.</p><span class="tag">Assistant Social Media Manager</span></div>
     <div class="st now rv"><div class="yr">April 2026 · Now</div><h3>Yash Sharma Digital</h3><p>Leading content for brands across Ahmedabad.</p><span class="tag">Content Director</span></div>
   </div>
 </div></section>
