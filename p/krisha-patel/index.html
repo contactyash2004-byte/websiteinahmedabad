@@ -53,7 +53,8 @@ img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}butt
 .hud .modes{position:absolute;bottom:92px;left:0;right:0;display:flex;justify-content:center;gap:14px;font-size:11px;letter-spacing:.08em;text-shadow:0 1px 4px #000}.hud .modes b{color:var(--y);font-weight:700}
 .hud .sh{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);width:58px;height:58px;border-radius:50%;border:4px solid #fff;display:grid;place-items:center}
 .hud .sh::after{content:"";width:22px;height:22px;border-radius:6px;background:var(--r)}
-.lsimg{object-position:50% 22%}
+.iph .lsbg{filter:blur(16px) brightness(.62);transform:scale(1.25)}
+.iph .lsimg{position:absolute;left:0;right:0;top:20%;width:100%;height:auto;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 46px);mask-image:linear-gradient(180deg,transparent 0,#000 46px)}
 .ls{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;padding:54px 12px 14px;background:linear-gradient(180deg,#0000 0%,#0000 48%,#000c 82%,#000e 100%)}
 .ls-note{display:flex;align-items:center;gap:9px;background:#f2f2f7d9;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#111;border-radius:18px;padding:9px 9px 9px 10px;box-shadow:0 10px 24px -10px #0008;animation:drop 1s .6s both cubic-bezier(.2,.9,.3,1.2)}
 @keyframes drop{from{transform:translateY(-30px);opacity:0}to{transform:none;opacity:1}}
@@ -71,7 +72,7 @@ img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}butt
 .stk{position:absolute;z-index:7;right:-2%;top:6%;width:96px;height:96px;border-radius:50%;background:var(--y);color:#000;display:grid;place-items:center;text-align:center;font-weight:800;font-size:15px;line-height:1.05;transform:rotate(12deg);box-shadow:0 14px 30px -12px #ffd60a88;animation:wob 4s ease-in-out infinite}
 .stk b{color:var(--r);font-size:20px}
 @keyframes wob{50%{transform:rotate(4deg) scale(1.05)}}
-@media(max-width:560px){.stk{width:78px;height:78px;font-size:13px;right:-2px;top:-34px}.ls-big{font-size:40px}.chipf{display:none}}
+@media(max-width:560px){.stk{width:78px;height:78px;font-size:13px;right:-2px;top:-34px}.ls-big{font-size:40px}}@media(max-width:900px){.chipf{display:none}}
 @media(max-width:900px){.hero .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}.htxt{display:contents}.hero .rec{order:1;align-self:flex-start}.hero h1{order:2;margin-bottom:26px}.hph{order:3;margin-bottom:34px}.hero .roles{order:4}.hero p{order:5}.hero .ctas{order:6}}
 .chipf{position:absolute;z-index:6;background:#000c;backdrop-filter:blur(10px);border:1px solid #ffffff22;border-radius:16px;padding:10px 14px;font-size:13px;line-height:1.35}
 .chipf b{display:block;font-size:20px}
@@ -146,6 +147,35 @@ section{padding:100px 0}
 .book{padding:26px}.book b{display:block;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--y);margin-bottom:12px;font-family:'JetBrains Mono',monospace}
 .need{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.need button{background:var(--p2);border:1px solid var(--line);border-radius:12px;padding:11px 14px;font-weight:600;font-size:14.5px}.need button.on{background:var(--y);color:#000;border-color:var(--y)}
 .book .btn{width:100%;justify-content:center}
+.regs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}@media(max-width:1000px){.regs{grid-template-columns:1fr 1fr}}@media(max-width:560px){.regs{grid-template-columns:1fr}}
+.reg{background:var(--p1);border:1px solid var(--line);border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px;transition:border-color .25s,transform .25s}.reg:hover{border-color:var(--y);transform:translateY(-3px)}
+.rh{display:flex;align-items:center;gap:12px}.rh img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#222;border:2px solid var(--line)}.rh div{flex:1;min-width:0}.rh b{display:block;font-size:17px;letter-spacing:-.02em}.rh small{color:var(--mut);font-size:12.5px}.rh svg{width:18px;height:18px;color:var(--mut)}
+.rel{align-self:flex-start;background:#ffd60a1f;color:var(--y);border-radius:99px;padding:5px 11px;font-size:12.5px;font-weight:700}
+.reg p{color:#b9b9be;font-size:14.5px;line-height:1.5}
+.also{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}.also span{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;margin-right:4px}.also em{font-style:normal;border:1px solid var(--line);border-radius:99px;padding:7px 12px;font-size:13.5px;color:#d1d1d6}
+.fmts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:900px){.fmts{grid-template-columns:1fr 1fr}}@media(max-width:560px){.fmts{grid-template-columns:1fr}}
+.fmt{background:var(--p1);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.fmt i{font-style:normal;color:var(--y);font-size:13px}.fmt h3{font-size:24px;font-weight:800;letter-spacing:-.03em;line-height:1.05}.fmt p{color:#b9b9be;font-size:15px;flex:1}.fmt small{color:var(--mut);font-size:12px}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}@media(max-width:900px){.why{grid-template-columns:1fr}}
+.why h2{font-size:clamp(42px,5.6vw,76px);font-weight:800;letter-spacing:-.05em;line-height:.92;margin:12px 0 16px}.why h2 .s{color:var(--y);font-weight:400}.why>div>p{color:var(--mut);margin-bottom:26px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px}.steps div{background:var(--p1);border:1px solid var(--line);border-radius:18px;padding:18px}.steps b{color:var(--y);font-size:13px}.steps h4{font-size:19px;margin:6px 0 4px}.steps p{color:#b9b9be;font-size:14px;line-height:1.45}
+.sets{background:var(--p1);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.sets-h{padding:16px 20px;font-size:13px;color:var(--mut);border-bottom:1px solid var(--line);font-family:'JetBrains Mono',monospace;letter-spacing:.06em}
+.set{display:flex;align-items:center;gap:14px;padding:16px 20px;border-bottom:1px solid var(--line);cursor:pointer;position:relative}.set:last-child{border-bottom:0}
+.set span{flex:1;min-width:0}.set b{display:block;font-size:16px}.set small{display:block;color:var(--mut);font-size:13.5px;line-height:1.4;margin-top:2px}
+.set input{position:absolute;opacity:0;pointer-events:none}
+.tg{flex:none;width:51px;height:31px;border-radius:99px;background:#39393d;position:relative;transition:background .25s}.tg::after{content:"";position:absolute;top:2px;left:2px;width:27px;height:27px;border-radius:50%;background:#fff;box-shadow:0 2px 6px #0006;transition:transform .25s}
+.set input:checked+.tg{background:var(--g)}.set input:checked+.tg::after{transform:translateX(20px)}
+.model{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#1b1015,#0A0A0B 65%);border:1px solid #ff3b3022;border-radius:36px;padding:clamp(22px,4vw,52px)}@media(max-width:900px){.model{grid-template-columns:1fr}}
+.model h2{font-size:clamp(46px,6vw,82px);font-weight:800;letter-spacing:-.05em;line-height:.92;margin:12px 0 16px}.model h2 .s{color:var(--y);font-weight:400}.mtext>p{color:#c7c7cc;margin-bottom:20px}
+.msvc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:22px}.msvc div{background:#ffffff0d;border:1px solid var(--line);border-radius:14px;padding:12px 14px}.msvc b{display:block;font-size:15px}.msvc small{color:var(--mut);font-size:12.5px}
+.mreels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}@media(max-width:600px){.mreels{grid-template-columns:1fr 1fr}}
+.mreels .tile .meta span{display:none}
+.faq{display:grid;gap:10px;max-width:860px}
+.faq details{background:var(--p1);border:1px solid var(--line);border-radius:18px;padding:18px 22px}
+.faq summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--y);font-size:22px;line-height:1}.faq details[open] summary::after{content:"–"}
+.faq p{color:#b9b9be;margin-top:10px}
 footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 .modebar{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:55;display:flex;gap:4px;background:#000d;backdrop-filter:blur(14px);border:1px solid #ffffff1a;border-radius:99px;padding:6px;max-width:calc(100vw - 24px);overflow-x:auto;scrollbar-width:none}
 .modebar::-webkit-scrollbar{display:none}
@@ -159,11 +189,11 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 <span class="rec m rv"><i></i>REC · SHOT ON IPHONE</span>
 <h1 class="rv" style="--d:.08s">Krisha<br>Patel<span class="s">.</span></h1>
 <div class="roles rv" style="--d:.16s"><span class="on">iPhone videographer</span><span>Model</span><span>Anchor</span><span>Founder, @kahani.explorer</span></div>
-<p class="rv" style="--d:.24s">I shoot reels and brand films on an iPhone, and I step in front of the camera too. Trained in Gujarati newsrooms, now telling Amdavad's stories one vertical frame at a time.</p>
+<p class="rv" style="--d:.24s">Close to 300 video shoots, all on an iPhone: founder stories, series, podcasts and ad films. Trained in Gujarati newsrooms, I plan every frame, guide you on set, and hand over footage on Google Drive in 48 hours, or AirDrop it before you leave.</p>
 <div class="ctas rv" style="--d:.32s"><a class="btn b-g" href="https://wa.me/918780352367?text=Hi%20Krisha!%20I%20saw%20your%20website%20and%20want%20to%20book%20a%20shoot." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Book a shoot</a><a class="btn b-ghost" href="#work"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> See the reels</a></div>
 </div>
 <div class="rv hph" style="--d:.15s;position:relative">
-<div class="iph"><div class="sc"><div class="di"></div><img class="pst lsimg" src="img/hero.jpg" alt="Krisha Patel smiling">
+<div class="iph"><div class="sc"><div class="di"></div><img class="pst lsbg" src="img/hero.jpg" alt=""><img class="lsimg" src="img/hero.jpg" alt="Krisha Patel smiling">
 <div class="ls"><div class="ls-note"><div class="ls-app">📷</div><div class="ls-msg"><small>iPHONE · now</small><b>Krisha wants to shoot for you.</b><span>Reels, brand films, interviews. Allow?</span></div><a class="ls-allow" href="https://wa.me/918780352367?text=Hi%20Krisha!%20Allowed%20%E2%9C%A8%20I%20saw%20your%20website%20and%20want%20to%20book%20a%20shoot." target="_blank" rel="noopener">Allow</a></div>
 <div class="ls-top"><span class="ls-hi">Hi, I'm Krisha 👋</span><b class="ls-big">I shoot<br>on <span class="s">iPhone.</span></b><span class="ls-sb">iPhone videographer · Ahmedabad</span></div>
 <div class="ls-bot"><i>🔦</i><span class="ls-bar"></span><i>📷</i></div></div></div></div>
@@ -174,11 +204,17 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 </div></header>
 
 <div class="stats"><div class="wrap">
-<div class="rv"><b>2023</b><span>First newsroom: Zee 24 Kalak</span></div>
-<div class="rv" style="--d:.06s"><b>5</b><span>Newsroom & media roles</span></div>
-<div class="rv" style="--d:.12s"><b>5</b><span>Brands & channels on this page</span></div>
-<div class="rv" style="--d:.18s"><b>1</b><span>Heritage series she founded</span></div>
+<div class="rv"><b>~300</b><span>Video shoots on iPhone</span></div>
+<div class="rv" style="--d:.06s"><b>48 hrs</b><span>Footage on Google Drive</span></div>
+<div class="rv" style="--d:.12s"><b>AirDrop</b><span>Instant, for iPhone & Mac users</span></div>
+<div class="rv" style="--d:.18s"><b>2023</b><span>First newsroom: Zee 24 Kalak</span></div>
 </div></div>
+
+<section id="clients" style="padding-bottom:0"><div class="wrap">
+<div class="sh2"><div><div class="lab m rv">◎ Regulars</div><h2 class="rv">Pages she <span class="s">shoots for.</span></h2></div><p class="rv">Not one-off gigs. These are the pages Krisha works with again and again, behind and in front of the camera.</p></div>
+<div class="regs"><a class="reg rv" style="--d:0s" href="https://www.instagram.com/sakhi_magazine/" target="_blank" rel="noopener"><div class="rh"><img src="img/logos/sakhi.jpg" alt="Sakhi Magazine" loading="lazy"><div><b>Sakhi Magazine</b><small>@sakhi_magazine · 4,063 followers</small></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div><span class="rel">Shoots regularly · on camera</span><p>Places, food, education and festival features for a women's magazine with a 45-year legacy.</p></a><a class="reg rv" style="--d:0.06s" href="https://www.instagram.com/pakodeez/" target="_blank" rel="noopener"><div class="rh"><img src="img/logos/pakodeez.jpg" alt="Pakodeez" loading="lazy"><div><b>Pakodeez</b><small>@pakodeez · 12K followers</small></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div><span class="rel">Brand films</span><p>Store openings, brand stories and ambience films for the franchise food brand.</p></a><a class="reg rv" style="--d:0.12s" href="https://www.instagram.com/aadeepattel/" target="_blank" rel="noopener"><div class="rh"><img src="img/logos/aadee.jpg" alt="AaDee Pattel" loading="lazy"><div><b>AaDee Pattel</b><small>@aadeepattel · 16.2K followers</small></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div><span class="rel">Founder-led content</span><p>Organic, founder-face reels for the café and franchise consultant, including the Pakodeez story.</p></a><a class="reg rv" style="--d:0.18s" href="https://www.instagram.com/yashsharma.digital/" target="_blank" rel="noopener"><div class="rh"><img src="img/logos/ysd.jpg" alt="Yash Sharma Digital" loading="lazy"><div><b>Yash Sharma Digital</b><small>@yashsharma.digital · 4,307 followers</small></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></div><span class="rel">iPhone videographer · team</span><p>Shoots for the Ahmedabad content agency behind 300+ businesses and 2,000+ videos.</p></a></div>
+<div class="also rv"><span>Also</span><em>@kahani.explorer · founder</em><em>Heritage by Viha · model</em><em>Printer House · model</em><em>Mohini Sharma Digital · shoots</em></div>
+</div></section>
 
 <section id="work"><div class="wrap">
 <div class="sh2"><div><div class="lab m rv">● Video · camera roll</div><h2 class="rv">Shot on <span class="s">iPhone.</span></h2></div><p class="rv">Brand films, magazine features, heritage walks and fashion shoots. Tap a reel to play it, or open it on Instagram.</p></div>
@@ -249,6 +285,17 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 <div class="meta"><small>Printer House</small><b>Printer House, Gandhinagar</b><span>Model · product ad</span></div></div></div>
 </div></section>
 
+<section id="formats" style="padding-top:0"><div class="wrap">
+<div class="sh2"><div><div class="lab m rv">◫ Formats</div><h2 class="rv">What she <span class="s">shoots.</span></h2></div><p class="rv">From founder stories that grow organically to full ad shoots with models.</p></div>
+<div class="fmts"><div class="fmt rv" style="--d:0s"><i class="m">01</i><h3>Founder-led content</h3><p>The owner on camera, telling the story in their own words. Built for organic reach, not ads.</p><small class="m">AaDee Pattel · Pakodeez</small></div><div class="fmt rv" style="--d:0.06s"><i class="m">02</i><h3>Series content</h3><p>Episodes that bring people back: walks, talks and recurring features with one look.</p><small class="m">Digital Heritage Walk · Sakhi Edu Talks</small></div><div class="fmt rv" style="--d:0.12s"><i class="m">03</i><h3>Podcast series</h3><p>Sit-down conversations with phone-on-tripod setups, framed for reels and long-form.</p><small class="m">Interviews &amp; podcasts</small></div><div class="fmt rv" style="--d:0s"><i class="m">04</i><h3>Ad shoots</h3><p>Product and brand ads with a clear hook, a clean frame and a call to action.</p><small class="m">Printer House · brand films</small></div><div class="fmt rv" style="--d:0.06s"><i class="m">05</i><h3>Shoots with models</h3><p>Fashion and ethnic-wear films, posed and guided for movement.</p><small class="m">Heritage by Viha</small></div><div class="fmt rv" style="--d:0.12s"><i class="m">06</i><h3>Features &amp; events</h3><p>Cafés, exhibitions, festivals and places, covered on location.</p><small class="m">Sakhi Magazine</small></div></div>
+</div></section>
+
+<section id="why" style="padding-top:0"><div class="wrap"><div class="why">
+<div><div class="lab m rv">⚙ Settings · why Krisha</div><h2 class="rv">All the right <span class="s">settings, on.</span></h2><p class="rv">What you get on every shoot, from the first WhatsApp to the last clip.</p>
+<div class="steps rv"><div><b class="m">01</b><h4>Brief</h4><p>Tell her the brand, the goal and the date on WhatsApp.</p></div><div><b class="m">02</b><h4>Shot list</h4><p>Hooks, script and frames planned before the shoot.</p></div><div><b class="m">03</b><h4>Shoot day</h4><p>On location, with direction for everyone on camera.</p></div><div><b class="m">04</b><h4>Delivery</h4><p>AirDrop on the spot, or Google Drive within 48 hours.</p></div></div></div>
+<div class="sets rv"><div class="sets-h">Krisha's shoot settings</div><label class="set"><span><b>Creative shot planning</b><small>Every reel starts with a hook and a shot list, not just a camera.</small></span><input type="checkbox" checked aria-label="Creative shot planning"><i class="tg"></i></label><label class="set"><span><b>Direction on set</b><small>She guides you on where to stand, how to speak and how to move, so you look natural.</small></span><input type="checkbox" checked aria-label="Direction on set"><i class="tg"></i></label><label class="set"><span><b>Google Drive in 48 hours</b><small>All footage, organised and delivered within two days.</small></span><input type="checkbox" checked aria-label="Google Drive in 48 hours"><i class="tg"></i></label><label class="set"><span><b>Instant AirDrop</b><small>On an iPhone or Mac? Clips land on your device before the shoot ends.</small></span><input type="checkbox" checked aria-label="Instant AirDrop"><i class="tg"></i></label><label class="set"><span><b>Newsroom scripting</b><small>Lines written by someone trained at Zee 24 Kalak and GSTV.</small></span><input type="checkbox" checked aria-label="Newsroom scripting"><i class="tg"></i></label><label class="set"><span><b>Small, quiet setup</b><small>One phone and a tripod. No big crew, so first-timers relax faster.</small></span><input type="checkbox" checked aria-label="Small, quiet setup"><i class="tg"></i></label></div>
+</div></div></section>
+
 <section id="kahani" style="padding-top:0"><div class="wrap"><div class="kahani">
 <div><div class="lab m rv">◉ Cinematic · founder</div><h2 class="rv">Kahani <span class="s">Explorer.</span></h2>
 <p class="rv">The page Krisha started to tell Amdavad's stories: pols, havelis and houses that survived history, walked and filmed on location in the <b>Digital Heritage Walk</b> series.</p>
@@ -272,7 +319,7 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 <li><i>01</i><span><b>iPhone reels & brand films</b>: cafés, food brands, stores, events.</span></li>
 <li><i>02</i><span><b>Scripting</b>: news-trained writing that hooks in the first line.</span></li>
 <li><i>03</i><span><b>Anchoring & hosting</b>: on-camera for magazines and brands.</span></li>
-<li><i>04</i><span><b>Interviews & podcasts</b>: phone-on-tripod setups.</span></li>
+<li><i>04</i><span><b>Interviews & podcasts</b>: phone-on-tripod setups, framed for reels.</span></li>
 <li><i>05</i><span><b>Modelling</b>: fashion, ethnic wear and product shoots.</span></li></ul>
 <a class="btn b-g" href="https://wa.me/918780352367?text=Hi%20Krisha!%20I%20saw%20your%20website.%20I%20want%20to%20discuss%20a%20shoot." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Discuss a shoot</a></div>
 <figure class="rv"><video data-lazy="v/bts3412.mp4" poster="v/bts3412.jpg" muted loop playsinline preload="none"></video><figcaption>Studio day</figcaption></figure>
@@ -280,14 +327,37 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 <figure class="rv" style="--d:.12s"><video data-lazy="v/bts4775.mp4" poster="v/bts4775.jpg" muted loop playsinline preload="none"></video><figcaption>Sit-down shoot</figcaption></figure>
 </div></div></section>
 
-<section id="portrait" style="padding-top:0"><div class="wrap">
-<div class="sh2"><div><div class="lab m rv">◐ Portrait mode</div><h2 class="rv">In front of <span class="s">the lens.</span></h2></div><p class="rv">Model and anchor for fashion labels, product ads and magazine features. Ethnic, western, studio or street.</p></div>
-<div class="pm"><figure class="rv" style="--d:0s"><img src="img/flowers.jpg" alt="Krisha Patel, Floral set" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.05s"><img src="img/garba.jpg" alt="Krisha Patel, Navratri" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.1s"><img src="img/sunglasses.jpg" alt="Krisha Patel, Sunlit" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.15000000000000002s"><img src="img/kurta.jpg" alt="Krisha Patel, Ethnic" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0s"><img src="img/teal.jpg" alt="Krisha Patel, Garden" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.05s"><img src="img/bridge.jpg" alt="Krisha Patel, Golden hour" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.1s"><img src="img/sea.jpg" alt="Krisha Patel, Seaside" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.15000000000000002s"><img src="img/books.jpg" alt="Krisha Patel, Bookstore" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0s"><img src="img/portrait.jpg" alt="Krisha Patel, Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.05s"><img src="img/stage.jpg" alt="Krisha Patel, Stage" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.1s"><img src="img/teal2.jpg" alt="Krisha Patel, Garden II" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.15000000000000002s"><img src="img/sea2.jpg" alt="Krisha Patel, Coastline" loading="lazy"><figcaption>Portrait</figcaption></figure></div>
+<section id="model" style="padding-top:0"><div class="wrap">
+<div class="model">
+<div class="mtext"><div class="lab m rv">◐ Portrait mode · model & anchor</div><h2 class="rv">In front of <span class="s">the lens.</span></h2>
+<p class="rv">After close to 300 shoots behind the camera, Krisha knows exactly what a frame needs, and that makes her easy to direct in front of it. Book her as a model or anchor for your brand.</p>
+<div class="msvc rv"><div><b>Fashion &amp; ethnic wear</b><small>Chaniya choli, kurtas, western</small></div><div><b>Product &amp; brand ads</b><small>Print, retail and service brands</small></div><div><b>Anchoring &amp; hosting</b><small>Magazine features, events, launches</small></div><div><b>Magazine features</b><small>On-camera for places, food and culture</small></div></div>
+<a class="btn b-y rv" href="https://wa.me/918780352367?text=Hi%20Krisha!%20I%20saw%20your%20website%20and%20want%20to%20book%20you%20as%20a%20model%20%2F%20anchor." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Book as model / anchor</a></div>
+<div class="mreels"><div class="tile rv" data-cat="fashion" style="--d:0s" data-v="reels/DZ-UWDkEVVZ.mp4">
+<img src="reels/DZ-UWDkEVVZ.jpg" alt="Outfits that tell a story" loading="lazy"><video muted loop playsinline preload="none"></video><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+<a class="ig" href="https://www.instagram.com/reel/DZ-UWDkEVVZ/" target="_blank" rel="noopener" aria-label="Watch on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+<div class="meta"><small>Heritage by Viha</small><b>Outfits that tell a story</b><span>Clothing shoot</span></div></div><div class="tile rv" data-cat="fashion" style="--d:0.05s" data-v="">
+<img src="reels/DaYEaXzCNsM.jpg" alt="The perfect chaniya choli" loading="lazy">
+<a class="ig" href="https://www.instagram.com/reel/DaYEaXzCNsM/" target="_blank" rel="noopener" aria-label="Watch on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+<div class="meta"><small>Heritage by Viha</small><b>The perfect chaniya choli</b><span>Clothing shoot</span></div></div><div class="tile rv" data-cat="fashion" style="--d:0.1s" data-v="">
+<img src="reels/DaGC0vHjVU1.jpg" alt="Navratri in Gujarati style" loading="lazy">
+<a class="ig" href="https://www.instagram.com/reel/DaGC0vHjVU1/" target="_blank" rel="noopener" aria-label="Watch on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+<div class="meta"><small>Heritage by Viha</small><b>Navratri in Gujarati style</b><span>Clothing shoot</span></div></div><div class="tile rv" data-cat="fashion" style="--d:0.15000000000000002s" data-v="reels/DbdHsIsJqTd.mp4">
+<img src="reels/DbdHsIsJqTd.jpg" alt="Printer House, Gandhinagar" loading="lazy"><video muted loop playsinline preload="none"></video><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+<a class="ig" href="https://www.instagram.com/reel/DbdHsIsJqTd/" target="_blank" rel="noopener" aria-label="Watch on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+<div class="meta"><small>Printer House</small><b>Printer House, Gandhinagar</b><span>Model · product ad</span></div></div></div>
+</div>
+<div class="pm" style="margin-top:28px"><figure class="rv" style="--d:0s"><img src="img/flowers.jpg" alt="Krisha Patel, Floral set" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.05s"><img src="img/garba.jpg" alt="Krisha Patel, Navratri" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.1s"><img src="img/sunglasses.jpg" alt="Krisha Patel, Sunlit" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.15000000000000002s"><img src="img/kurta.jpg" alt="Krisha Patel, Ethnic" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0s"><img src="img/teal.jpg" alt="Krisha Patel, Garden" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.05s"><img src="img/bridge.jpg" alt="Krisha Patel, Golden hour" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.1s"><img src="img/sea.jpg" alt="Krisha Patel, Seaside" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.15000000000000002s"><img src="img/books.jpg" alt="Krisha Patel, Bookstore" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0s"><img src="img/portrait.jpg" alt="Krisha Patel, Portrait" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.05s"><img src="img/stage.jpg" alt="Krisha Patel, Stage" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.1s"><img src="img/teal2.jpg" alt="Krisha Patel, Garden II" loading="lazy"><figcaption>Portrait</figcaption></figure><figure class="rv" style="--d:0.15000000000000002s"><img src="img/sea2.jpg" alt="Krisha Patel, Coastline" loading="lazy"><figcaption>Portrait</figcaption></figure></div>
 </div></section>
 
 <section id="journey" style="padding-top:0"><div class="wrap">
 <div class="sh2"><div><div class="lab m rv">▭ Pano · the journey</div><h2 class="rv">From newsroom <span class="s">to reels.</span></h2></div><p class="rv">Field reporting, scripts and digital desks first. That's why her reels open with a story, not just a shot.</p></div>
 <div class="tl"><div class="job rv now"><div class="when">Now</div><div><h3>Yash Sharma Digital <span>· iPhone videographer</span></h3><p>Reels and brand films, shot and produced on iPhone.</p></div></div><div class="job rv now"><div class="when">Collab</div><div><h3>Mohini Sharma Digital <span>· iPhone videographer</span></h3><p>Shoots for the agency's brands.</p></div></div><div class="job rv now"><div class="when">Founder</div><div><h3>@kahani.explorer <span>· Founder · on camera</span></h3><p>Digital Heritage Walk: Amdavad's stories, told on location.</p></div></div><div class="job rv "><div class="when">May – Dec 2025</div><div><h3>Offbeat Stories <span>· Assistant social media manager</span></h3></div></div><div class="job rv "><div class="when">Aug 2024 – Jan 2025</div><div><h3>Zee 24 Kalak <span>· Digital content writer</span></h3></div></div><div class="job rv "><div class="when">Jun – Jul 2024</div><div><h3>Mantavya News <span>· Field reporter</span></h3></div></div><div class="job rv "><div class="when">Jan – Mar 2024</div><div><h3>GSTV <span>· Script writer</span></h3></div></div><div class="job rv "><div class="when">Aug – Nov 2023</div><div><h3>Zee 24 Kalak <span>· Field reporter, videographer &amp; creative script writer</span></h3><p>Where it started: reporting, shooting and scripting in a newsroom.</p></div></div></div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap">
+<div class="sh2"><div><div class="lab m rv">? FAQ</div><h2 class="rv">Good to <span class="s">know.</span></h2></div></div>
+<div class="faq"><details class="rv"><summary>Is an iPhone good enough for a brand ad?</summary><p>Yes. Modern iPhones shoot sharp 4K video, and every reel on this page was made for Instagram-first brands. What matters most is planning, light and direction.</p></details><details class="rv"><summary>How fast do I get the footage?</summary><p>Within 48 hours on Google Drive. If you use an iPhone or Mac, she can AirDrop clips to you right at the shoot.</p></details><details class="rv"><summary>Will you help with the script?</summary><p>Yes. With a newsroom background in reporting and script writing, she can plan hooks and lines for you.</p></details><details class="rv"><summary>Can you also be the face of the video?</summary><p>Yes, as an anchor, host or model, depending on what the brand needs.</p></details><details class="rv"><summary>How do I book?</summary><p>Send the date, location and what you need on WhatsApp. She'll reply with availability.</p></details></div>
 </div></section>
 
 <section id="contact" style="padding-top:0"><div class="wrap"><div class="card rv">
@@ -299,13 +369,13 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 </div></div></section>
 <footer>© Krisha Patel · Ahmedabad · Shot on iPhone</footer>
 
-<nav class="modebar" id="modebar"><a href="#work">VIDEO</a><a href="#kahani">CINEMATIC</a><a href="#bts">BTS</a><a href="#portrait">PORTRAIT</a><a href="#journey">PANO</a><a href="#contact">CONTACT</a></nav>
+<nav class="modebar" id="modebar"><a href="#clients">CLIENTS</a><a href="#work">VIDEO</a><a href="#why">SETTINGS</a><a href="#kahani">CINEMATIC</a><a href="#model">PORTRAIT</a><a href="#journey">PANO</a><a href="#contact">CONTACT</a></nav>
 <script>
 (function(){
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -5% 0px"});
 document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
 document.querySelectorAll("video[data-lazy]").forEach(function(v){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!v.src)v.src=v.dataset.lazy;v.play().catch(function(){})}else v.pause()})},{threshold:.3}).observe(v)});
-var tiles=[].slice.call(document.querySelectorAll(".roll .tile, .kstack .tile")),hover=matchMedia("(hover:hover)").matches;
+var tiles=[].slice.call(document.querySelectorAll(".roll .tile, .kstack .tile, .mreels .tile")),hover=matchMedia("(hover:hover)").matches;
 function play(t){var v=t.querySelector("video");if(!v)return;tiles.forEach(function(o){if(o!==t&&o.classList.contains("play")){o.classList.remove("play");o.querySelector("video").pause()}});if(!v.src)v.src=t.dataset.v;t.classList.add("play");v.play().catch(function(){})}
 function stop(t){var v=t.querySelector("video");if(!v)return;t.classList.remove("play");v.pause()}
 tiles.forEach(function(t){if(hover){t.addEventListener("mouseenter",function(){play(t)});t.addEventListener("mouseleave",function(){stop(t)})}
