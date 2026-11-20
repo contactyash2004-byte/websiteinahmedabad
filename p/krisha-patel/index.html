@@ -53,6 +53,26 @@ img,video{display:block;max-width:100%}a{color:inherit;text-decoration:none}butt
 .hud .modes{position:absolute;bottom:92px;left:0;right:0;display:flex;justify-content:center;gap:14px;font-size:11px;letter-spacing:.08em;text-shadow:0 1px 4px #000}.hud .modes b{color:var(--y);font-weight:700}
 .hud .sh{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);width:58px;height:58px;border-radius:50%;border:4px solid #fff;display:grid;place-items:center}
 .hud .sh::after{content:"";width:22px;height:22px;border-radius:6px;background:var(--r)}
+.lsimg{object-position:50% 22%}
+.ls{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;padding:54px 12px 14px;background:linear-gradient(180deg,#0000 0%,#0000 48%,#000c 82%,#000e 100%)}
+.ls-note{display:flex;align-items:center;gap:9px;background:#f2f2f7d9;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#111;border-radius:18px;padding:9px 9px 9px 10px;box-shadow:0 10px 24px -10px #0008;animation:drop 1s .6s both cubic-bezier(.2,.9,.3,1.2)}
+@keyframes drop{from{transform:translateY(-30px);opacity:0}to{transform:none;opacity:1}}
+.ls-app{flex:none;width:30px;height:30px;border-radius:8px;background:#1c1c1e;display:grid;place-items:center;font-size:15px}
+.ls-msg{flex:1;min-width:0;line-height:1.2}.ls-msg small{display:block;font-size:9.5px;font-weight:700;letter-spacing:.06em;color:#6b6b70}
+.ls-msg b{display:block;font-size:12.5px;margin-top:2px}.ls-msg span{display:block;font-size:11px;color:#3a3a3c;margin-top:1px}
+.ls-allow{flex:none;background:#0A84FF;color:#fff;border-radius:99px;padding:6px 11px;font-size:12px;font-weight:700}
+.ls-top{margin-top:auto;text-align:center;color:#fff;padding-bottom:14px}
+.ls-hi{display:block;font-size:14px;font-weight:600;opacity:.95}
+.ls-big{display:block;font-size:46px;font-weight:800;letter-spacing:-.05em;line-height:.92;margin:6px 0 8px}.ls-big .s{color:var(--y);font-weight:400}
+.ls-sb{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.08em;opacity:.85}
+.ls-bot{display:flex;justify-content:space-between;align-items:center;padding:0 10px}
+.ls-bot i{font-style:normal;width:40px;height:40px;border-radius:50%;background:#ffffff26;backdrop-filter:blur(10px);display:grid;place-items:center;font-size:16px}
+.ls-bar{width:110px;height:4px;border-radius:9px;background:#fff;align-self:flex-end;margin-bottom:-4px}
+.stk{position:absolute;z-index:7;right:-2%;top:6%;width:96px;height:96px;border-radius:50%;background:var(--y);color:#000;display:grid;place-items:center;text-align:center;font-weight:800;font-size:15px;line-height:1.05;transform:rotate(12deg);box-shadow:0 14px 30px -12px #ffd60a88;animation:wob 4s ease-in-out infinite}
+.stk b{color:var(--r);font-size:20px}
+@keyframes wob{50%{transform:rotate(4deg) scale(1.05)}}
+@media(max-width:560px){.stk{width:78px;height:78px;font-size:13px;right:-2px;top:-34px}.ls-big{font-size:40px}.chipf{display:none}}
+@media(max-width:900px){.hero .wrap{display:flex;flex-direction:column;align-items:stretch;gap:0}.htxt{display:contents}.hero .rec{order:1;align-self:flex-start}.hero h1{order:2;margin-bottom:26px}.hph{order:3;margin-bottom:34px}.hero .roles{order:4}.hero p{order:5}.hero .ctas{order:6}}
 .chipf{position:absolute;z-index:6;background:#000c;backdrop-filter:blur(10px);border:1px solid #ffffff22;border-radius:16px;padding:10px 14px;font-size:13px;line-height:1.35}
 .chipf b{display:block;font-size:20px}
 .cf1{left:-8%;top:18%}.cf2{right:-8%;bottom:24%}
@@ -135,16 +155,19 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 <div class="island"><i class="dot"></i><b>Krisha Patel</b><span>iPhone videographer</span><a class="go" href="https://wa.me/918780352367?text=Hi%20Krisha!%20I%20saw%20your%20website%20and%20want%20to%20book%20a%20shoot." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>Book</a></div>
 
 <header class="hero" id="top"><div class="wrap">
-<div>
+<div class="htxt">
 <span class="rec m rv"><i></i>REC · SHOT ON IPHONE</span>
 <h1 class="rv" style="--d:.08s">Krisha<br>Patel<span class="s">.</span></h1>
 <div class="roles rv" style="--d:.16s"><span class="on">iPhone videographer</span><span>Model</span><span>Anchor</span><span>Founder, @kahani.explorer</span></div>
 <p class="rv" style="--d:.24s">I shoot reels and brand films on an iPhone, and I step in front of the camera too. Trained in Gujarati newsrooms, now telling Amdavad's stories one vertical frame at a time.</p>
 <div class="ctas rv" style="--d:.32s"><a class="btn b-g" href="https://wa.me/918780352367?text=Hi%20Krisha!%20I%20saw%20your%20website%20and%20want%20to%20book%20a%20shoot." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Book a shoot</a><a class="btn b-ghost" href="#work"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> See the reels</a></div>
 </div>
-<div class="rv" style="--d:.15s;position:relative">
-<div class="iph"><div class="sc"><div class="di"></div><img class="pst" src="v/showreel.jpg" alt=""><video id="hv" src="v/showreel.mp4" poster="v/showreel.jpg" muted loop playsinline autoplay></video>
-<div class="hud"><div class="grid"></div><div class="t" id="tc">00:00:00</div><div class="fmt"><b>4K</b> · 30</div><div class="fc"></div><div class="modes"><span>SLO-MO</span><b>VIDEO</b><span>PORTRAIT</span><span>CINEMATIC</span></div><div class="sh"></div></div></div></div>
+<div class="rv hph" style="--d:.15s;position:relative">
+<div class="iph"><div class="sc"><div class="di"></div><img class="pst lsimg" src="img/hero.jpg" alt="Krisha Patel smiling">
+<div class="ls"><div class="ls-note"><div class="ls-app">📷</div><div class="ls-msg"><small>iPHONE · now</small><b>Krisha wants to shoot for you.</b><span>Reels, brand films, interviews. Allow?</span></div><a class="ls-allow" href="https://wa.me/918780352367?text=Hi%20Krisha!%20Allowed%20%E2%9C%A8%20I%20saw%20your%20website%20and%20want%20to%20book%20a%20shoot." target="_blank" rel="noopener">Allow</a></div>
+<div class="ls-top"><span class="ls-hi">Hi, I'm Krisha 👋</span><b class="ls-big">I shoot<br>on <span class="s">iPhone.</span></b><span class="ls-sb">iPhone videographer · Ahmedabad</span></div>
+<div class="ls-bot"><i>🔦</i><span class="ls-bar"></span><i>📷</i></div></div></div></div>
+<div class="stk"><span>I <b>♥</b><br>Apple</span></div>
 <div class="chipf cf1"><b>21</b>reels on this page</div>
 <div class="chipf cf2"><b class="m" style="color:var(--y)">1,084</b>likes on one brand film</div>
 </div>
@@ -281,10 +304,6 @@ footer{padding:40px 0 120px;text-align:center;color:var(--mut);font-size:13px}
 (function(){
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -5% 0px"});
 document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
-var hv=document.getElementById("hv"),tc=document.getElementById("tc"),t0=Date.now();
-function p(n){return String(n).padStart(2,"0")}
-setInterval(function(){var s=Math.floor((Date.now()-t0)/1000);tc.textContent="00:"+p(Math.floor(s/60))+":"+p(s%60)},500);
-hv.play&&hv.play().catch(function(){});
 document.querySelectorAll("video[data-lazy]").forEach(function(v){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!v.src)v.src=v.dataset.lazy;v.play().catch(function(){})}else v.pause()})},{threshold:.3}).observe(v)});
 var tiles=[].slice.call(document.querySelectorAll(".roll .tile, .kstack .tile")),hover=matchMedia("(hover:hover)").matches;
 function play(t){var v=t.querySelector("video");if(!v)return;tiles.forEach(function(o){if(o!==t&&o.classList.contains("play")){o.classList.remove("play");o.querySelector("video").pause()}});if(!v.src)v.src=t.dataset.v;t.classList.add("play");v.play().catch(function(){})}
