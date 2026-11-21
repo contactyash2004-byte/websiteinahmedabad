@@ -32,11 +32,14 @@ nav.top .btn{padding:12px 20px}
 @media(max-width:980px){nav.top .lk{display:none}}@media(max-width:520px){nav.top .btn span{display:none}nav.top .btn{padding:12px}}
 
 /* hero: the photo is shown whole; on phones you scroll to finish it */
-.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--bg)}
-.hero .ph{position:relative}.hero .ph img{width:100%;height:auto}
-.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,transparent 22%),linear-gradient(180deg,#0B080999 0%,transparent 14%,transparent 80%,var(--bg) 100%)}
-.hero .tx{position:sticky;top:0;align-self:start;height:100vh;min-height:640px;display:flex;flex-direction:column;justify-content:flex-end;padding:120px 0 64px max(20px,calc((100vw - 1320px)/2 + 20px));z-index:2}
-.hero h1{font-size:clamp(96px,14.5vw,236px);margin:18px 0 0;margin-right:-28%;position:relative}
+.hero{position:relative;height:100vh;min-height:720px;max-height:1100px;overflow:hidden;background:radial-gradient(60vw 60vw at 72% 40%,#E3264F2e,transparent 60%),radial-gradient(40vw 40vw at 10% 90%,#E2B15B14,transparent 60%),var(--bg)}
+.hero .ph{position:absolute;top:0;right:0;bottom:0;width:56%}.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.hero .ph img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}.hero .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0B080999 0%,transparent 16%,transparent 72%,var(--bg) 100%)}
+.hero .tx{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding:110px 0 40px max(20px,calc((100vw - 1320px)/2 + 20px));max-width:62%}
+.hero h1{font-size:clamp(96px,11.5vw,200px);margin:16px 0 0;position:relative;text-shadow:0 20px 60px #000c}
+.hero .glass{position:absolute;z-index:3;right:max(24px,calc((100vw - 1320px)/2 + 20px));bottom:64px;display:flex;gap:14px;align-items:center;padding:16px 20px;border-radius:22px;background:linear-gradient(135deg,#ffffff24,#ffffff0a);border:1px solid #ffffff38;backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 30px 60px -20px #000c,inset 0 1px 0 #ffffff40}
+.hero .glass b{font-family:'Anton',sans-serif;font-weight:400;font-size:44px;line-height:1}.hero .glass span{font-size:14px;line-height:1.3;color:#eee5e8}
+.hero .glass.g2{bottom:auto;top:120px;padding:10px 16px;border-radius:99px;font:600 12px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;gap:10px}.hero .glass.g2 i{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:bl 1.4s steps(2) infinite}
 .hero h1 span{display:block}.hero h1 span:last-child{color:var(--red)}
 .hero .ln{font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(26px,2.6vw,38px);line-height:1.15;margin:18px 0 10px;max-width:560px}
 .roles{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}.roles span{border:1px solid #ffffff38;border-radius:99px;padding:8px 15px;font-weight:600;font-size:14.5px}
@@ -44,10 +47,10 @@ nav.top .btn{padding:12px 20px}
 .hero p{color:#D9D0D3;max-width:520px;margin-bottom:26px}.hero p b{color:#fff}
 .ctas{display:flex;flex-wrap:wrap;gap:12px}
 @media(max-width:860px){
-.hero{grid-template-columns:1fr}.hero .ph{order:-1}
+.hero{height:auto;min-height:0;max-height:none;display:flex;flex-direction:column;background:var(--bg)}.hero .ph{position:relative;width:100%;order:-1}.hero .ph img{height:auto;-webkit-mask-image:none;mask-image:none}.hero .glass{display:none}
 .hero .ph::after{background:linear-gradient(180deg,#0B080980 0%,transparent 12%,transparent 62%,var(--bg) 99%)}
-.hero .tx{position:relative;height:auto;min-height:0;padding:0 20px 56px;margin-top:-16vw}
-.hero h1{font-size:31vw;margin-right:0}
+.hero .tx{position:relative;height:auto;max-width:none;padding:0 20px 56px;margin-top:-16vw}
+.hero h1{font-size:31vw}
 }
 .mq{overflow:hidden;border-block:1px solid var(--line);background:var(--red);color:#fff;padding:16px 0}
 .mq div{display:flex;gap:40px;width:max-content;animation:mq 38s linear infinite;font-size:clamp(30px,3.6vw,46px)}
@@ -152,6 +155,35 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 .dock{position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:60;display:none;gap:8px}
 .dock a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:16px;font-weight:700;box-shadow:0 14px 30px -12px #000}.dock a svg{width:18px;height:18px}.dock .d1{background:var(--fg);color:#0B0809}.dock .d2{background:var(--red);color:#fff}
 @media(max-width:760px){.dock{display:flex}body{padding-bottom:84px}}
+/* depth pass: gradients, glass, shadows */
+body{background:radial-gradient(900px 700px at -10% 30%,#E3264F12,transparent 70%),radial-gradient(800px 700px at 110% 70%,#E2B15B0d,transparent 70%),var(--bg);background-attachment:fixed}
+.scene,#hire,#faq,#contact{position:relative;isolation:isolate}
+.scene::before,#hire::before{content:"";position:absolute;z-index:-1;top:40px;right:-10vw;width:60vw;height:60vw;max-width:900px;max-height:900px;border-radius:50%;background:radial-gradient(circle,#E3264F1c,transparent 62%);pointer-events:none}
+.scene:nth-of-type(even)::before{right:auto;left:-15vw;background:radial-gradient(circle,#E2B15B14,transparent 62%)}
+.hc,.rc,.svc,.faq details,.vo,.stats{background:linear-gradient(150deg,#ffffff12 0%,#ffffff05 60%,#ffffff02 100%);border:1px solid #ffffff1c;backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:0 30px 70px -34px #000,inset 0 1px 0 #ffffff1f}
+.stats{border-radius:28px;overflow:hidden;margin-top:20px}
+.hc.ag{background:linear-gradient(140deg,#FF4A6F 0%,#E3264F 45%,#9E1233 100%);border-color:#ff7b96;box-shadow:0 40px 90px -30px #E3264F8c,inset 0 1px 0 #ffffff59}
+.btn{box-shadow:0 14px 34px -14px #000}
+.b-red{background:linear-gradient(135deg,#FF4B70,#E3264F 55%,#B8183C);box-shadow:0 16px 40px -14px #E3264Fb3,inset 0 1px 0 #ffffff4d}
+.b-ghost{background:#ffffff0f;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tile{box-shadow:0 26px 50px -26px #000,0 0 0 1px #ffffff12;transition:transform .35s,box-shadow .35s}
+.tile:hover{transform:translateY(-6px);box-shadow:0 36px 70px -28px #E3264F80,0 0 0 1px #E3264F66}
+.tile .pl{background:#ffffff2e;border:1px solid #ffffff59;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.tile .meta{padding:12px 14px;left:10px;right:10px;bottom:10px;border-radius:16px;background:linear-gradient(150deg,#0B080966,#0B080933);border:1px solid #ffffff1f;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.tile::after{background:linear-gradient(180deg,transparent 60%,#0B0809b3)}
+.feat .big{box-shadow:0 40px 90px -36px #000,0 0 0 1px #ffffff14}
+.feat .big span.go{background:#ffffffd9;backdrop-filter:blur(8px)}
+.mos>div{box-shadow:0 30px 60px -30px #000,0 0 0 1px #ffffff12}
+.lookbook img{box-shadow:0 22px 44px -24px #000}
+.about img{box-shadow:0 40px 90px -36px #000,0 0 0 1px #ffffff14}
+.mq{background:linear-gradient(90deg,#B8183C,#E3264F 30%,#FF4B70 50%,#E3264F 70%,#B8183C);box-shadow:0 20px 50px -20px #E3264F80}
+.contact{background:linear-gradient(140deg,#FF4A6F 0%,#E3264F 40%,#8E0F2E 100%);box-shadow:0 50px 110px -40px #E3264F99}
+.cl a{background:#ffffff1f;border:1px solid #ffffff33;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.bk{background:linear-gradient(150deg,#0B0809e6,#0B0809cc);border:1px solid #ffffff1f;box-shadow:0 30px 60px -30px #000}
+.reg a img{box-shadow:0 8px 20px -8px #000}
+nav.top.solid{background:linear-gradient(180deg,#0B0809d9,#0B0809a6)}
+.frame .cap .A{text-shadow:0 10px 50px #000}
+
 </style></head><body>
 <nav class="top" id="nav"><div class="wrap"><a class="lg" href="#top">Vidhi<b>.</b></a>
 <div class="lk"><a href="#hire">Hire</a><a href="#ads">Ads</a><a href="#jewellery">Jewellery</a><a href="#bridal">Bridal</a><a href="#fashion">Fashion</a><a href="#faq">FAQ</a></div>
@@ -167,6 +199,7 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 <div class="ctas rv" style="--d:.22s"><a class="btn b-red" href="https://wa.me/919316776979?text=Hi%20Vidhi!%20I%20saw%20your%20website%20and%20want%20to%20book%20you." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Hire Vidhi</a><a class="btn b-ghost" href="#ads"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg> See her work</a></div>
 </div>
 <div class="ph"><img src="img/bridal.jpg" alt="Vidhi Katva in a bridal lehenga" fetchpriority="high"></div>
+<div class="glass g2"><i></i>Based in Ahmedabad</div><div class="glass"><b>1,000+</b><span>videos for brands,<br>jewellers &amp; agencies</span></div>
 </header>
 
 <div class="mq" aria-hidden="true"><div class="A"><span>Model</span><span>Video presenter</span><span>Anchor</span><span>Voice-over</span><span>1,000+ videos</span><span>Jewellery</span><span>Bridal</span><span>Brand ads</span><span>Model</span><span>Video presenter</span><span>Anchor</span><span>Voice-over</span><span>1,000+ videos</span><span>Jewellery</span><span>Bridal</span><span>Brand ads</span></div></div>
@@ -198,7 +231,7 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 <img src="reels/DYO15EYNRvH.jpg" alt="Fluffy bhature, spicy chole" loading="lazy"><video muted loop playsinline preload="none"></video><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
 <div class="meta"><small>Nagpal's · Food promo</small><b>Fluffy bhature, spicy chole</b></div></div></div><div class="swipe">Swipe → · Tap to play with sound</div></div></section>
 
-<div class="frame cut"><img src="img/p21.jpg" alt="Vidhi Katva" loading="lazy"><div class="cap"><div class="tc"><i></i>Scene 02 · Jewellery</div><div class="A">Made for <span class="S">the spotlight.</span></div></div></div>
+<div class="frame cut"><img style="object-position:50% 22%" src="img/p07.jpg" alt="Vidhi Katva" loading="lazy"><div class="cap"><div class="tc"><i></i>Scene 02 · Jewellery</div><div class="A">Made for <span class="S">the spotlight.</span></div></div></div>
 
 <section id="jewellery" class="scene "><div class="wrap">
 <div class="sc-h"><div><div class="tc rv"><i></i>Scene 02 · Jewellery</div><h2 class="A rv">Jewellery, <span class="S">worn like it's hers.</span></h2></div><div class="rv"><p>Showroom launches, wedding-season campaigns and close-up product films for jewellers, including a full launch campaign for A.A. Choksi.</p><a class="btn b-red" href="https://wa.me/919316776979?text=Hi%20Vidhi!%20I%20want%20to%20book%20you%20for%20a%20jewellery%20shoot." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Book a jewellery shoot</a></div></div>
@@ -215,7 +248,7 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 <img src="reels/Dd6akQkuFa0.jpg" alt="Trend meets tradition" loading="lazy"><video muted loop playsinline preload="none"></video><span class="pl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
 <div class="meta"><small>Shri Vahanvati Jewellers · Jewellery promo</small><b>Trend meets tradition</b></div></div></div><div class="swipe">Swipe → · Tap to play with sound</div></div></section>
 
-<div class="frame cut"><img src="img/p09.jpg" alt="Vidhi Katva" loading="lazy"><div class="cap"><div class="tc"><i></i>Scene 03 · Bridal</div><div class="A">Every bride <span class="S">needs a face.</span></div></div></div>
+<div class="frame cut"><img style="object-position:50% 50%" src="img/p09.jpg" alt="Vidhi Katva" loading="lazy"><div class="cap"><div class="tc"><i></i>Scene 03 · Bridal</div><div class="A">Every bride <span class="S">needs a face.</span></div></div></div>
 
 <section id="bridal" class="scene "><div class="wrap">
 <div class="sc-h"><div><div class="tc rv"><i></i>Scene 03 · Bridal & makeup</div><h2 class="A rv">Bridal, <span class="S">worn beautifully.</span></h2></div><div class="rv"><p>Makeup artists and bridal studios book Vidhi to show their work: heavy jewellery, soft glam, haldi and mehendi looks, in photos and video.</p><a class="btn b-red" href="https://wa.me/919316776979?text=Hi%20Vidhi!%20I'm%20a%20makeup%20artist%20%2F%20bridal%20studio%20and%20want%20to%20book%20you%20for%20a%20shoot." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Book a bridal shoot</a></div></div>
@@ -241,7 +274,7 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 <img src="reels/Da4yp5PN95x.jpg" alt="A little miracle on the way" loading="lazy"><span class="pl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></span>
 <div class="meta"><small>Sindur Rental House · Baby shower look</small><b>A little miracle on the way</b></div></div></div><div class="swipe">Swipe → · Tap to play with sound</div></div></section>
 
-<div class="frame cut"><img src="img/p20.jpg" alt="Vidhi Katva" loading="lazy"><div class="cap"><div class="tc"><i></i>Scene 05 · On camera</div><div class="A">Ready when <span class="S">you say action.</span></div></div></div>
+<div class="frame cut"><img style="object-position:50% 50%" src="img/p20.jpg" alt="Vidhi Katva" loading="lazy"><div class="cap"><div class="tc"><i></i>Scene 05 · On camera</div><div class="A">Ready when <span class="S">you say action.</span></div></div></div>
 
 <section id="anchor" class="scene "><div class="wrap">
 <div class="sc-h"><div><div class="tc rv"><i></i>Scene 05 · Anchor & host</div><h2 class="A rv">City stories, <span class="S">told warmly.</span></h2></div><div class="rv"><p>Monsoon getaways, Kankaria memories, rainy-day snacks and where to play garba: features for Sakhi Magazine and Ahmedabad Explore.</p><a class="btn b-red" href="https://wa.me/919316776979?text=Hi%20Vidhi!%20I%20want%20you%20to%20anchor%20%2F%20host%20a%20feature." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg> Book as anchor</a></div></div>
@@ -271,7 +304,7 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 </div></div></section>
 
 <section id="about" style="padding-top:0"><div class="wrap"><div class="about">
-<img class="rv" src="img/p03.jpg" alt="Vidhi Katva" loading="lazy">
+<img class="rv" src="img/p12.jpg" alt="Vidhi Katva" loading="lazy">
 <div><div class="tc rv"><i></i>About</div><h2 class="A rv">Hello, <span class="S">I'm Vidhi.</span></h2>
 <p class="rv">A creative girl from Ahmedabad with a passion for anchoring, modelling, voice-over and content creation. I love being in front of the camera, exploring new concepts and bringing ideas to life through videos.</p>
 <p class="rv">Over 2.5 years I've worked with marketing agencies, brands and media platforms, in front of the camera and behind the scenes. I'm a little introverted in my personal life, but I give my best to every opportunity I take on.</p>
@@ -286,7 +319,7 @@ footer{text-align:center;padding:40px 0 50px;color:var(--mut);font-size:14px}foo
 
 <section style="padding-top:0"><div class="wrap">
 <div class="sh"><div class="tc rv"><i></i>Lookbook</div><h2 class="A rv">Ethnic, western <span class="S">&amp; everyday.</span></h2></div>
-<div class="lookbook"><img class="rv" src="img/p18.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p00.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p11.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p16.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p22.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p24.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p12.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p26.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p33.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p15.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p06.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p32.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p28.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p04.jpg" alt="Vidhi Katva look" loading="lazy"></div>
+<div class="lookbook"><img class="rv" src="img/p18.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p00.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p11.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p16.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p22.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p24.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p03.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p26.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p33.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p15.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p06.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p32.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p28.jpg" alt="Vidhi Katva look" loading="lazy"><img class="rv" src="img/p04.jpg" alt="Vidhi Katva look" loading="lazy"></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap">
