@@ -1,5 +1,29 @@
 [
  {
+  "date": "2026-11-22",
+  "slug": "krisha-patel",
+  "name": "Krisha Patel",
+  "area": "Ahmedabad",
+  "category": "Portfolios & personal brands",
+  "url": "https://krishapatel.in/"
+ },
+ {
+  "date": "2026-11-22",
+  "slug": "the-loud-studio",
+  "name": "The Loud Studio",
+  "area": "Ahmedabad",
+  "category": "Photographers & studios",
+  "url": "https://theloudstudio.com/"
+ },
+ {
+  "date": "2026-11-22",
+  "slug": "vidhi-katva",
+  "name": "Vidhi Katva",
+  "area": "Ahmedabad",
+  "category": "Portfolios & personal brands",
+  "url": "https://vidhikatva.com/"
+ },
+ {
   "date": "2026-11-21",
   "slug": "bewolf-fitness",
   "name": "Bewolf Fitness",
@@ -38,46 +62,6 @@
   "area": "Bodakdev, Ahmedabad",
   "category": "Cafés",
   "url": "https://websiteinahmedabad.in/p/the-messy-door-cafe/"
- },
- {
-  "date": "2026-11-20",
-  "slug": "kinjal-mehndi-nails",
-  "name": "Mehndi and Nails By Kinjal",
-  "area": "South Bopal, Ahmedabad",
-  "category": "Mehendi artists",
-  "url": "https://websiteinahmedabad.in/p/kinjal-mehndi-nails/"
- },
- {
-  "date": "2026-11-20",
-  "slug": "krina-patel-mehendi",
-  "name": "Krina Patel Bridal Mehendi Artist",
-  "area": "Motera, Ahmedabad",
-  "category": "Mehendi artists",
-  "url": "https://websiteinahmedabad.in/p/krina-patel-mehendi/"
- },
- {
-  "date": "2026-11-20",
-  "slug": "pooja-bridal-mehndi",
-  "name": "Pooja Bridal Mehndi Art and Classes",
-  "area": "Chandkheda, Ahmedabad",
-  "category": "Mehendi artists",
-  "url": "https://websiteinahmedabad.in/p/pooja-bridal-mehndi/"
- },
- {
-  "date": "2026-11-20",
-  "slug": "pooja-mistry-mehndi",
-  "name": "Pooja Mistry Mehndi Artist",
-  "area": "Chandkheda, Ahmedabad",
-  "category": "Mehendi artists",
-  "url": "https://websiteinahmedabad.in/p/pooja-mistry-mehndi/"
- },
- {
-  "date": "2026-11-20",
-  "slug": "rutas-mehandi",
-  "name": "Ruta's Mehandi",
-  "area": "Maninagar, Ahmedabad",
-  "category": "Mehendi artists",
-  "url": "https://websiteinahmedabad.in/p/rutas-mehandi/"
  },
  {
   "date": "2026-11-19",
